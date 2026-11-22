@@ -9,6 +9,7 @@ extends CharacterBody3D
 @export var stamina_capacity: float = 5.0
 @export var stamina_drain_per_second: float = 1.25
 @export var stamina_recovery_per_second: float = 0.9
+@export var jump_velocity: float = 4.0
 @export var mouse_sensitivity: float = 0.002
 @export var acceleration: float = 18.0
 @export_range(0.1, 1.0, 0.05) var max_auto_step_height: float = 0.45
@@ -20,7 +21,8 @@ var gravity: float = float(ProjectSettings.get_setting("physics/3d/default_gravi
 var _standing_capsule_height: float
 var _standing_collision_y: float
 var _standing_head_y: float
-var _ignored_items: Dictionary = {}
+var _jump_requested: bool = false
+var _jump_was_pressed: bool = false
 var _item_push_cooldowns: Dictionary = {}
 
 @onready var camera: Camera3D = $Head/Camera3D
@@ -47,6 +49,9 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("jump") and not event.is_echo():
+		_jump_requested = true
+
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
@@ -77,7 +82,16 @@ func _physics_process(delta: float) -> void:
 	var target_head_y := crouch_head_height if target_height < _standing_capsule_height - 0.01 else _standing_head_y
 	head.position.y = move_toward(head.position.y, target_head_y, crouch_transition_speed * delta)
 
-	if not is_on_floor():
+	var jump_is_held := Input.is_action_pressed("jump")
+	if jump_is_held and not _jump_was_pressed:
+		_jump_requested = true
+	_jump_was_pressed = jump_is_held
+	var jump_pressed := _jump_requested or Input.is_action_just_pressed("jump")
+	_jump_requested = false
+	if is_on_floor():
+		if jump_pressed and not crouching:
+			velocity.y = jump_velocity
+	else:
 		velocity.y -= gravity * delta
 
 	var input_vector := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
@@ -156,10 +170,6 @@ func _nudge_overlapping_items() -> void:
 			continue
 
 		var item_id := item.get_instance_id()
-		if not _ignored_items.has(item_id):
-			add_collision_exception_with(item)
-			_ignored_items[item_id] = true
-
 		var away_direction := item.global_position - global_position
 		away_direction.y = 0.0
 		if away_direction.length_squared() < 0.001 or movement_direction.length_squared() < 0.001:

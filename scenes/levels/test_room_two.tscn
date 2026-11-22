@@ -1,0 +1,117 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/entities/player/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://scenes/constructions/transition_door.tscn" id="2_transition_door"]
+
+[sub_resource type="Environment" id="Environment_test_room"]
+background_mode = 1
+background_color = Color(0.035, 0.047, 0.06, 1)
+
+[sub_resource type="StandardMaterial3D" id="Material_floor"]
+albedo_color = Color(0.24, 0.28, 0.29, 1)
+
+[sub_resource type="BoxMesh" id="Mesh_floor"]
+material = SubResource("Material_floor")
+size = Vector3(12, 0.5, 12)
+
+[sub_resource type="BoxShape3D" id="Shape_floor"]
+size = Vector3(12, 0.5, 12)
+
+[sub_resource type="StandardMaterial3D" id="Material_wall"]
+albedo_color = Color(0.13, 0.18, 0.18, 1)
+
+[sub_resource type="BoxMesh" id="Mesh_wall_wide"]
+material = SubResource("Material_wall")
+size = Vector3(12, 4, 0.4)
+
+[sub_resource type="BoxShape3D" id="Shape_wall_wide"]
+size = Vector3(12, 4, 0.4)
+
+[sub_resource type="BoxMesh" id="Mesh_wall_side"]
+material = SubResource("Material_wall")
+size = Vector3(0.4, 4, 12)
+
+[sub_resource type="BoxShape3D" id="Shape_wall_side"]
+size = Vector3(0.4, 4, 12)
+
+[sub_resource type="StandardMaterial3D" id="Material_test_cube"]
+albedo_color = Color(0.36, 0.47, 0.48, 1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="Mesh_test_cube"]
+material = SubResource("Material_test_cube")
+size = Vector3(1.2, 0.55, 1.2)
+
+[sub_resource type="BoxShape3D" id="Shape_test_cube"]
+size = Vector3(1.2, 0.55, 1.2)
+
+[node name="JumpTestRoom" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_test_room")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.785398, -0.523599, 0)
+light_energy = 1.1
+shadow_enabled = true
+
+[node name="Ground" type="StaticBody3D" parent="."]
+position = Vector3(0, -0.25, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("Mesh_floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("Shape_floor")
+
+[node name="NorthWall" type="StaticBody3D" parent="."]
+position = Vector3(0, 2, -6)
+
+[node name="Mesh" type="MeshInstance3D" parent="NorthWall"]
+mesh = SubResource("Mesh_wall_wide")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NorthWall"]
+shape = SubResource("Shape_wall_wide")
+
+[node name="SouthWall" type="StaticBody3D" parent="."]
+position = Vector3(0, 2, 6)
+
+[node name="Mesh" type="MeshInstance3D" parent="SouthWall"]
+mesh = SubResource("Mesh_wall_wide")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SouthWall"]
+shape = SubResource("Shape_wall_wide")
+
+[node name="WestWall" type="StaticBody3D" parent="."]
+position = Vector3(-6, 2, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="WestWall"]
+mesh = SubResource("Mesh_wall_side")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WestWall"]
+shape = SubResource("Shape_wall_side")
+
+[node name="EastWall" type="StaticBody3D" parent="."]
+position = Vector3(6, 2, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="EastWall"]
+mesh = SubResource("Mesh_wall_side")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EastWall"]
+shape = SubResource("Shape_wall_side")
+
+[node name="JumpTestCube" type="StaticBody3D" parent="."]
+position = Vector3(0, 0.275, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="JumpTestCube"]
+mesh = SubResource("Mesh_test_cube")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JumpTestCube"]
+shape = SubResource("Shape_test_cube")
+
+[node name="DoorBackToPrototype" parent="." instance=ExtResource("2_transition_door")]
+position = Vector3(0, 0, 5.68)
+destination_scene = "res://scenes/levels/prototype_room.tscn"
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector3(0, 0.9, 3.8)

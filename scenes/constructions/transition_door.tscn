@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/transition_door.gd" id="1_script"]
+
+[sub_resource type="StandardMaterial3D" id="Material_panel"]
+albedo_color = Color(0.12, 0.24, 0.28, 1)
+metallic = 0.45
+roughness = 0.55
+
+[sub_resource type="StandardMaterial3D" id="Material_frame"]
+albedo_color = Color(0.34, 0.42, 0.42, 1)
+metallic = 0.35
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Mesh_panel"]
+material = SubResource("Material_panel")
+size = Vector3(1.35, 2.2, 0.18)
+
+[sub_resource type="BoxMesh" id="Mesh_frame"]
+material = SubResource("Material_frame")
+size = Vector3(0.18, 2.4, 0.32)
+
+[sub_resource type="BoxShape3D" id="Shape_panel"]
+size = Vector3(1.35, 2.2, 0.18)
+
+[node name="TransitionDoor" type="StaticBody3D"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_script")
+
+[node name="Panel" type="MeshInstance3D" parent="."]
+position = Vector3(0, 1.1, 0)
+mesh = SubResource("Mesh_panel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 1.1, 0)
+shape = SubResource("Shape_panel")
+
+[node name="FrameLeft" type="MeshInstance3D" parent="."]
+position = Vector3(-0.76, 1.2, 0)
+mesh = SubResource("Mesh_frame")
+
+[node name="FrameRight" type="MeshInstance3D" parent="."]
+position = Vector3(0.76, 1.2, 0)
+mesh = SubResource("Mesh_frame")
+
+[node name="FrameTop" type="MeshInstance3D" parent="."]
+position = Vector3(0, 2.4, 0)
+rotation = Vector3(0, 0, 1.5708)
+mesh = SubResource("Mesh_frame")
+
+[node name="AccessLabel" type="Label3D" parent="."]
+position = Vector3(0, 2.58, -0.12)
+pixel_size = 0.003
+text = "E  |  ACESSAR"
+font_size = 36
+outline_size = 4

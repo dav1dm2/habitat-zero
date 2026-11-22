@@ -53,14 +53,20 @@ func handle_input(event: InputEvent) -> void:
 
 
 func _pickup_aimed_item() -> void:
+	var hit := _raycast(PICKUP_RANGE)
+	if hit.is_empty():
+		_set_status("Mire em um item ou porta próxima e pressione E")
+		return
+
+	var target := hit.get("collider") as Node
+	if target != null and target.is_in_group("interactables"):
+		if target.has_method("interact"):
+			target.call("interact", player)
+		return
+
 	var empty_slot := _find_empty_slot()
 	if empty_slot == -1:
 		_set_status("Inventário cheio: solte um item com Q")
-		return
-
-	var hit := _raycast(PICKUP_RANGE)
-	if hit.is_empty():
-		_set_status("Mire em um item próximo para coletá-lo")
 		return
 
 	var world_item := hit.get("collider") as RigidBody3D

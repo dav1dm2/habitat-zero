@@ -12,6 +12,8 @@ height = 1.8
 radius = 0.85
 
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 1
 floor_snap_length = 0.5
 floor_stop_on_slope = false
 script = ExtResource("1_player")
@@ -21,7 +23,7 @@ shape = SubResource("Shape_player")
 
 [node name="ItemBumpArea" type="Area3D" parent="."]
 collision_layer = 0
-collision_mask = 1
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ItemBumpArea"]
 position = Vector3(0, -0.35, 0)
@@ -69,7 +71,7 @@ offset_left = 24.0
 offset_top = 20.0
 offset_right = 1300.0
 offset_bottom = 72.0
-text = "WASD mover  |  Mouse olhar  |  Shift correr  |  Ctrl agachar  |  Space lanterna\nE coletar  |  Q arremessar  |  M1 usar  |  Scroll ou 1-4 selecionar  |  Esc cursor"
+text = "WASD mover  |  Mouse olhar  |  Shift correr  |  Ctrl agachar  |  Space pular  |  Alt esquerdo lanterna\nE interagir/coletar  |  Q arremessar  |  M1 usar  |  Scroll ou 1-4 selecionar  |  Esc cursor"
 
 [node name="FlashlightStatus" type="Label" parent="Hud"]
 anchor_left = 1.0
