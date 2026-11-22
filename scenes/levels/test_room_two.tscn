@@ -112,6 +112,7 @@ shape = SubResource("Shape_test_cube")
 [node name="DoorBackToPrototype" parent="." instance=ExtResource("2_transition_door")]
 position = Vector3(0, 0, 5.68)
 destination_scene = "res://scenes/levels/prototype_room.tscn"
+destination_door_path = NodePath("DoorToJumpTestRoom")
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
 position = Vector3(0, 0.9, 3.8)
