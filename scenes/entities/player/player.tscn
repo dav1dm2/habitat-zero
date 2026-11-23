@@ -12,7 +12,7 @@ height = 1.8
 radius = 0.85
 
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 0
+collision_layer = 4
 collision_mask = 1
 floor_snap_length = 0.5
 floor_stop_on_slope = false
@@ -57,6 +57,14 @@ offset_right = 284.0
 offset_bottom = -24.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Hud/StaminaPanel"]
+
+[node name="HealthLabel" type="Label" parent="Hud/StaminaPanel/VBoxContainer"]
+text = "VIDA"
+
+[node name="HealthBar" type="ProgressBar" parent="Hud/StaminaPanel/VBoxContainer"]
+max_value = 100.0
+value = 100.0
+show_percentage = false
 
 [node name="StaminaLabel" type="Label" parent="Hud/StaminaPanel/VBoxContainer"]
 text = "ESTAMINA"

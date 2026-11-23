@@ -9,6 +9,7 @@ extends CharacterBody3D
 @export var stamina_capacity: float = 5.0
 @export var stamina_drain_per_second: float = 1.25
 @export var stamina_recovery_per_second: float = 0.9
+@export var max_health: float = 100.0
 @export var jump_velocity: float = 4.0
 @export var mouse_sensitivity: float = 0.002
 @export var acceleration: float = 18.0
@@ -17,6 +18,7 @@ extends CharacterBody3D
 
 const MAX_PITCH: float = 1.48353
 var stamina: float = 5.0
+var health: float = 100.0
 var gravity: float = float(ProjectSettings.get_setting("physics/3d/default_gravity"))
 var _standing_capsule_height: float
 var _standing_collision_y: float
@@ -29,6 +31,7 @@ var _item_push_cooldowns: Dictionary = {}
 @onready var head: Node3D = $Head
 @onready var body_collision: CollisionShape3D = $CollisionShape3D
 @onready var stamina_bar: ProgressBar = $Hud/StaminaPanel/VBoxContainer/StaminaBar
+@onready var health_bar: ProgressBar = $Hud/StaminaPanel/VBoxContainer/HealthBar
 @onready var inventory: Node = $Inventory
 @onready var flashlight: SpotLight3D = $Head/Camera3D/Flashlight
 @onready var flashlight_status_label: Label = $Hud/FlashlightStatus
@@ -36,8 +39,11 @@ var _item_push_cooldowns: Dictionary = {}
 
 func _ready() -> void:
 	stamina = stamina_capacity
+	health = max_health
 	stamina_bar.max_value = stamina_capacity
 	stamina_bar.value = stamina
+	health_bar.max_value = max_health
+	health_bar.value = health
 	# Keep the runtime crouch size local to this player instance.
 	body_collision.shape = body_collision.shape.duplicate()
 	var capsule := body_collision.shape as CapsuleShape3D
@@ -47,6 +53,20 @@ func _ready() -> void:
 	flashlight.visible = false
 	flashlight_status_label.text = "Lanterna: desligada"
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+
+func take_damage(amount: float) -> void:
+	if amount <= 0.0 or health <= 0.0:
+		return
+
+	health = maxf(0.0, health - amount)
+	health_bar.value = health
+	if health <= 0.0:
+		var active_scene := get_tree().current_scene
+		if active_scene != null and active_scene.has_method("on_player_death"):
+			active_scene.call("on_player_death")
+		else:
+			get_tree().reload_current_scene()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and not event.is_echo():

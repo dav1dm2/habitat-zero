@@ -8,6 +8,8 @@ const THROW_UP_IMPULSE: float = 1.8
 const PAINT_MARK_GROUP: StringName = &"test_paint_marks"
 const EFFECT_PAINT_BLUE: int = 1
 const EFFECT_ERASE_PAINT: int = 2
+const EFFECT_FERTILIZER: int = 3
+const EFFECT_FUSE: int = 4
 const WORLD_ITEM_SCENE: PackedScene = preload("res://scenes/entities/items/world_item.tscn")
 
 var slots: Array[Resource] = [null, null, null, null]
@@ -50,6 +52,14 @@ func handle_input(event: InputEvent) -> void:
 			_select_slot(posmod(selected_slot - 1, SLOT_COUNT))
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			_select_slot((selected_slot + 1) % SLOT_COUNT)
+
+
+func set_slot_item(slot_index: int, definition: Resource) -> bool:
+	if slot_index < 0 or slot_index >= SLOT_COUNT:
+		return false
+	slots[slot_index] = definition
+	_refresh_hud()
+	return true
 
 
 func _pickup_aimed_item() -> void:
@@ -125,6 +135,14 @@ func _use_selected_item() -> void:
 			_set_status("Marca azul aplicada")
 		EFFECT_ERASE_PAINT:
 			_erase_near_hit(hit.get("position", Vector3.ZERO))
+		EFFECT_FERTILIZER, EFFECT_FUSE:
+			var target := hit.get("collider") as Node
+			if target != null and target.has_method("accept_item") and target.call("accept_item", definition, player):
+				slots[selected_slot] = null
+				_refresh_hud()
+				_set_status("Usado: %s" % definition.get("display_name"))
+			else:
+				_set_status("Esse item só funciona no equipamento indicado")
 
 
 func _create_blue_mark(hit: Dictionary) -> void:

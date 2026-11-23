@@ -8,6 +8,7 @@
 [ext_resource type="Resource" path="res://resources/items/empty_scanner.tres" id="6_empty_scanner"]
 [ext_resource type="Resource" path="res://resources/items/empty_probe.tres" id="7_empty_probe"]
 [ext_resource type="PackedScene" path="res://scenes/constructions/transition_door.tscn" id="8_test_door"]
+[ext_resource type="PackedScene" path="res://scenes/constructions/transition_door.tscn" id="9_mechanics_door"]
 
 [sub_resource type="Environment" id="Environment_room"]
 background_mode = 1
@@ -332,6 +333,11 @@ definition = ExtResource("7_empty_probe")
 [node name="DoorToJumpTestRoom" parent="." instance=ExtResource("8_test_door")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, -9.74)
 destination_scene = "res://scenes/levels/test_room_two.tscn"
+destination_door_path = NodePath("DoorBackToPrototype")
+
+[node name="DoorToMechanicsTestRoom" parent="." instance=ExtResource("9_mechanics_door")]
+position = Vector3(0, 0, 9.74)
+destination_scene = "res://scenes/levels/mechanics_test_room.tscn"
 destination_door_path = NodePath("DoorBackToPrototype")
 
 [node name="Player" parent="." unique_id=1556635773 instance=ExtResource("1_player")]
