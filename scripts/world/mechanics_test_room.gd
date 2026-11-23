@@ -337,7 +337,8 @@ func _build_player() -> void:
 	_player.position = Vector3(0.0, 0.9, 9.4)
 	add_child(_player)
 	var inventory: Node = _player.get_node("Inventory")
-	inventory.call("set_slot_item", 0, FUSE)
+	if current_day == 1:
+		inventory.call("set_slot_item", 0, FUSE)
 	if current_day == 2:
 		var restored_panel := get_node_or_null("PowerPanel")
 		if restored_panel != null:
