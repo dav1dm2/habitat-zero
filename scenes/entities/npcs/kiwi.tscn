@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/entities/npcs/animal_controller.gd" id="1"]
+[sub_resource type="CapsuleShape3D" id="Body"]
+radius = 0.22
+height = 0.5
+[sub_resource type="CapsuleMesh" id="Mesh"]
+radius = 0.22
+height = 0.5
+[sub_resource type="BoxMesh" id="Head"]
+size = Vector3(0.18, 0.18, 0.5)
+
+[node name="Kiwi" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 9
+floor_snap_length = 0.6
+floor_max_angle = 0.7
+script = ExtResource("1")
+species = 2
+display_name = "Kiwi"
+walk_speed = 1.4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.25, 0)
+shape = SubResource("Body")
+
+[node name="Visual" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.25, 0)
+mesh = SubResource("Mesh")
+
+[node name="Head" type="MeshInstance3D" parent="Visual"]
+position = Vector3(0, 0.18, -0.22)
+mesh = SubResource("Head")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 0.75
+target_desired_distance = 0.5
+radius = 0.22
+
+[node name="StateLabel" type="Label3D" parent="."]
+position = Vector3(0, 1.0, 0)
+billboard = 1
+font_size = 28
+pixel_size = 0.009
+no_depth_test = false
+text = "Kiwi"

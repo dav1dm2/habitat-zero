@@ -155,6 +155,7 @@ func _build_room() -> void:
 	_build_buzzy()
 	_build_sleep_terminal()
 	_build_door()
+	_build_npc_test_door()
 	_build_player()
 	_build_hud()
 
@@ -406,3 +407,18 @@ func _material(tint: Color, emissive: bool = false) -> StandardMaterial3D:
 		material.emission = tint
 		material.emission_energy_multiplier = 1.4
 	return material
+
+
+func _build_npc_test_door() -> void:
+	var door := DOOR_SCENE.instantiate() as StaticBody3D
+	door.name = "DoorToNPCTest"
+	door.position = Vector3(6, 0, 9)
+	door.rotation.y = PI
+	door.destination_scene = "res://scenes/levels/npc_test_range.tscn"
+	door.destination_door_path = NodePath("DoorBack")
+	add_child(door)
+	var label := Label3D.new()
+	label.text = "E · TESTE DE NPCs\nFloresta / Habitat 1"
+	label.position = Vector3(6, 2.8, 9)
+	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	add_child(label)
