@@ -1,22 +1,17 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=4 format=3]
 [ext_resource type="Script" path="res://scripts/entities/npcs/buzzy.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/entities/npcs/buzzy_projection.tscn" id="2_projection"]
+
 [sub_resource type="SphereShape3D" id="Shape"]
 radius = 0.6
-[sub_resource type="SphereMesh" id="Mesh"]
-radius = 0.4
-height = 0.8
-[sub_resource type="StandardMaterial3D" id="Mat"]
-albedo_color = Color(0.1, 0.9, 0.9, 1)
-shading_mode = 0
 [node name="Buzzy" type="StaticBody3D"]
 script = ExtResource("1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 position = Vector3(0, 1, 0)
 shape = SubResource("Shape")
-[node name="Projection" type="MeshInstance3D" parent="."]
+[node name="Projection" parent="." instance=ExtResource("2_projection")]
 position = Vector3(0, 1, 0)
-mesh = SubResource("Mesh")
-material_override = SubResource("Mat")
+
 [node name="StateLabel" type="Label3D" parent="."]
 position = Vector3(0, 2, 0)
 billboard = 1

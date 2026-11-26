@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "name": "Recepção compacta",
+      "passed": true
+    },
+    {
+      "name": "Alojamento de até 20 m² com beliche",
+      "passed": true
+    },
+    {
+      "name": "Elevador removido",
+      "passed": true
+    },
+    {
+      "name": "Portas H1/H2 alinhadas na parede do corredor",
+      "passed": true
+    },
+    {
+      "name": "Painel dentro da sala de máquinas lateral",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até StorageApproach",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até RobotBase",
+      "passed": true
+    },
+    {
+      "name": "Recarga fora da radiação",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até PanelApproach",
+      "passed": true
+    },
+    {
+      "name": "Radiação restrita à sala de máquinas",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até BuzzyApproach",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até LabApproach",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até BedApproach",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até Habitat1Approach",
+      "passed": true
+    },
+    {
+      "name": "Porta H1 ligada à nova cena e retorno pareado",
+      "passed": true
+    },
+    {
+      "name": "Caminhada até Habitat2Approach",
+      "passed": true
+    },
+    {
+      "name": "E informa bloqueio de H2",
+      "passed": true
+    },
+    {
+      "name": "Retorno à recepção caminhando",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 18
+}

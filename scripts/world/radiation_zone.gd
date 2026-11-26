@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var damage_per_second: float = 1.7
+@export var damage_per_second: float = 2.24
 @export var tick_seconds: float = 0.5
 
 var _elapsed: float = 0.0

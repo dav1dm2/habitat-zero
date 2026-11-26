@@ -6,7 +6,8 @@ const DOOR_SCENE: PackedScene = preload("res://scenes/constructions/transition_d
 const BUSH_SCRIPT: Script = preload("res://scripts/world/fertilizable_bush.gd")
 const PANEL_SCRIPT: Script = preload("res://scripts/world/test_power_panel.gd")
 const RADIATION_SCRIPT: Script = preload("res://scripts/world/radiation_zone.gd")
-const ANIMAL_SCRIPT: Script = preload("res://scripts/world/test_animal.gd")
+const DEER = preload("res://scenes/entities/npcs/deer.tscn")
+const SKUNK = preload("res://scenes/entities/npcs/skunk.tscn")
 const FUSE: Resource = preload("res://resources/items/fuse.tres")
 const FERTILIZER: Resource = preload("res://resources/items/fertilizer.tres")
 
@@ -21,24 +22,83 @@ var _player: CharacterBody3D
 var _door_back: StaticBody3D
 
 
+@onready var reserve_state: Node = get_node("/root/ReserveState")
+var region: NavigationRegion3D
+var navigation_ready: bool = false
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	current_day = int(get_tree().root.get_meta("hz_mechanics_test_day", 1))
-	_build_room()
-	if current_day == 2:
-		power_restored = true
-		briefing_heard = true
-		get_tree().root.set_meta("hz_test_fertilized", 5)
-		for bush in get_tree().get_nodes_in_group("fertilizable_bushes"):
-			bush.add_to_group("fertilized_bushes")
-			var foliage := bush.get_node_or_null("Foliage") as MeshInstance3D
-			if foliage != null:
-				foliage.material_override = _material(Color(0.28, 0.62, 0.29))
-	else:
-		get_tree().root.remove_meta("hz_test_fertilized")
-	_update_notebook()
-	show_status("Dia 1 de teste — use o fusível no painel. Tab abre o caderno.")
+	if get_meta("authoring_build", false):
+		_build_room()
+	_player = get_node_or_null("Player")
+	_door_back = $DoorBackToPrototype
+	_status_label = $MechanicsTestUI/TestStatus
+	_notebook_panel = $MechanicsTestUI/TaskNotebook
+	_notebook_text = $MechanicsTestUI/TaskNotebook/Margin/NotebookText
+	_setup_navigation()
+	reserve_state.changed.connect(_apply_progress)
+	_apply_progress()
+	call_deferred("_bake")
+	if not get_meta("authoring_build", false) and not get_meta("simulation_background", false):
+		get_node("/root/ReserveSimulation").call_deferred("register_active_room", self)
 
+func get_room_key() -> String:
+	return "res://scenes/levels/mechanics_test_room.tscn"
+
+func get_room_bushes(include_inactive: bool = false) -> Array[Node]:
+	var result: Array[Node] = []
+	for bush in get_tree().get_nodes_in_group("fertilizable_bushes"):
+		if is_ancestor_of(bush):
+			result.append(bush)
+	return result
+
+func _setup_navigation() -> void:
+	region = get_node_or_null("NavigationRegion3D")
+	if region == null:
+		region = NavigationRegion3D.new()
+		region.name = "NavigationRegion3D"
+		add_child(region)
+	var nav: NavigationMesh
+	if region.navigation_mesh != null:
+		nav = region.navigation_mesh.duplicate(true)
+	else:
+		nav = NavigationMesh.new()
+		nav.geometry_parsed_geometry_type = NavigationMesh.PARSED_GEOMETRY_STATIC_COLLIDERS
+		nav.geometry_collision_mask = 1
+		nav.agent_radius = 0.75
+		nav.agent_height = 1.5
+		nav.cell_size = 0.25
+		nav.cell_height = 0.25
+		nav.agent_max_climb = 0.25
+	nav.geometry_source_geometry_mode = NavigationMesh.SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN
+	nav.geometry_source_group_name = StringName("mechanics_sources_%d" % get_instance_id())
+	add_to_group(nav.geometry_source_group_name)
+	region.navigation_mesh = nav
+
+func _bake() -> void:
+	region.bake_navigation_mesh(false)
+	await get_tree().physics_frame
+	navigation_ready = region.navigation_mesh.get_polygon_count() > 0
+
+func _apply_progress() -> void:
+	current_day = reserve_state.day
+	power_restored = reserve_state.power_restored
+	briefing_heard = reserve_state.briefing_heard
+	for zone in get_tree().get_nodes_in_group("radiation_zones"):
+		if is_ancestor_of(zone):
+			zone.set_physics_process(not power_restored and not get_meta("simulation_background", false))
+	for bush in get_room_bushes():
+		var done: bool = bush.bush_id in reserve_state.fertilized_ids
+		if done:
+			bush.add_to_group("fertilized_bushes")
+		else:
+			bush.remove_from_group("fertilized_bushes")
+		bush.get_node("Foliage").material_override = _material(Color(0.28,0.62,0.29) if done else Color(0.39,0.38,0.32))
+	if power_restored:
+		var lamp := get_node_or_null("PowerPanel/Lamp") as MeshInstance3D
+		if lamp != null:
+			lamp.material_override = _material(Color(0.2,0.95,0.45), true)
+	_update_notebook()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
@@ -51,58 +111,34 @@ func _input(event: InputEvent) -> void:
 
 
 func restore_power() -> void:
-	if power_restored:
-		show_status("A energia já foi restaurada.")
-		return
-	power_restored = true
-	for node in get_tree().get_nodes_in_group("radiation_zones"):
-		node.set_physics_process(false)
-	for node in get_tree().get_nodes_in_group("warning_lights"):
-		if node is OmniLight3D:
-			node.light_color = Color(0.2, 0.9, 0.35)
-	_update_notebook()
-	show_status("Energia restaurada. Buzzy está disponível no corredor.")
-
+	reserve_state.power_restored = true
+	reserve_state.changed.emit()
+	show_status("Energia restaurada. Buzzy e robô disponíveis.")
 
 func hear_briefing() -> void:
-	if not power_restored:
-		show_status("Buzzy: primeiro precisamos de energia. Eu gosto de luzes. Geralmente.")
+	if not reserve_state.power_restored:
+		show_status("Buzzy: primeiro precisamos de energia.")
 		return
-	briefing_heard = true
-	_update_notebook()
-	show_status("Buzzy: fertilize os cinco arbustos marcados. Depois, registre o fim do dia no terminal de descanso.")
+	reserve_state.briefing_heard = true
+	reserve_state.changed.emit()
+	show_status("Buzzy: adube os arbustos. O robô pode ajudar nas duas salas.")
 
-
-func on_bush_fertilized(_bush_id: int) -> void:
-	var count := get_tree().get_nodes_in_group("fertilized_bushes").size()
-	_update_notebook()
-	if count >= 5:
-		show_status("Cinco arbustos fertilizados. O cervo agora observa você em vez de fugir.")
-	else:
-		show_status("Arbustos fertilizados: %d/5. O fertilizante é consumido." % count)
-
+func on_bush_fertilized(bush_id: int) -> void:
+	reserve_state.fertilize(bush_id)
+	show_status("Arbusto da sala mecânica adubado.")
 
 func advance_day() -> void:
-	if current_day != 1 or not power_restored or not briefing_heard or get_tree().get_nodes_in_group("fertilized_bushes").size() < 5:
-		show_status("Ainda há tarefas do Dia 1 pendentes. Confira o caderno com Tab.")
+	var completed := get_room_bushes().all(func(bush): return bush.is_in_group("fertilized_bushes"))
+	if current_day != 1 or not power_restored or not briefing_heard or not completed:
+		show_status("Ainda há tarefas pendentes. Consulte o caderno.")
 		return
-	get_tree().root.set_meta("hz_mechanics_test_day", 2)
-	get_tree().root.set_meta("hz_test_fertilized", 5)
-	current_day = 2
-	for skunk in get_tree().get_nodes_in_group("test_skunks"):
-		skunk.set_process(true)
-	_update_notebook()
-	show_status("Dia 2 de teste: o gambá agora protege os arbustos. Afaste-se para sair do alcance dele.")
-
+	reserve_state.advance_test_day()
+	show_status("Dia 2: novos arbustos em Attis; gambá territorial.")
 
 func on_player_death() -> void:
-	if current_day == 2:
-		get_tree().root.set_meta("hz_mechanics_test_day", 2)
-	else:
-		get_tree().root.remove_meta("hz_mechanics_test_day")
-		get_tree().root.remove_meta("hz_test_fertilized")
+	reserve_state.restart_day()
+	get_node("/root/ReserveSimulation").prepare_player_travel()
 	get_tree().call_deferred("reload_current_scene")
-
 
 func show_status(message: String) -> void:
 	if _status_label != null:
@@ -112,9 +148,9 @@ func show_status(message: String) -> void:
 func _update_notebook() -> void:
 	if _notebook_text == null:
 		return
-	var fertilizer_count := 5 if current_day == 2 else get_tree().get_nodes_in_group("fertilized_bushes").size()
+	var fertilizer_count := get_room_bushes().filter(func(bush): return bush.is_in_group("fertilized_bushes")).size()
 	if current_day == 1:
-		_notebook_text.text = "DIA 1 — TESTE DE MECÂNICAS\n\n%s  Restaurar a energia instalando o fusível\n%s  Ouvir o briefing de Buzzy\n%s  Fertilizar cinco arbustos (%d/5)\n\nEste caderno cobre apenas as mecânicas presentes nesta sala de teste.\nDepois, use o terminal de descanso para simular o Dia 2.\n\nM1 usa o item selecionado. E interage. Q solta." % ["✓" if power_restored else "□", "✓" if briefing_heard else "□", "✓" if fertilizer_count >= 5 else "□", fertilizer_count]
+		_notebook_text.text = "DIA 1 — TESTE DE MECÂNICAS\n\n%s  Restaurar a energia instalando o fusível\n%s  Ouvir o briefing de Buzzy\n%s  Adubar cinco arbustos (%d/5)\n\nEste caderno cobre apenas as mecânicas presentes nesta sala de teste.\nDepois, use o terminal de descanso para simular o Dia 2.\n\nM1 usa o item selecionado. E interage. Q solta." % ["✓" if power_restored else "□", "✓" if briefing_heard else "□", "✓" if fertilizer_count >= 5 else "□", fertilizer_count]
 	else:
 		_notebook_text.text = "DIA 2 — TESTE DE COMPORTAMENTO\n\n□  Observar o gambá protegendo os arbustos\n\nA tarefa principal do Dia 2 e o sonho final ainda serão definidos.\nEste marcador existe apenas para testar a reação territorial."
 
@@ -158,6 +194,7 @@ func _build_room() -> void:
 	_build_npc_test_door()
 	_build_player()
 	_build_hud()
+	_build_fuse_supply()
 
 
 func _build_panel() -> void:
@@ -217,7 +254,7 @@ func _build_bushes() -> void:
 		bush.name = "FertilizableBush%d" % (index + 1)
 		bush.position = Vector3(-5.0 + index * 2.5, 0.0, -7.0)
 		bush.set_script(BUSH_SCRIPT)
-		bush.set("bush_id", index)
+		bush.set("bush_id", 100 + index)
 		add_child(bush)
 		var stem := MeshInstance3D.new()
 		stem.name = "Stem"
@@ -247,44 +284,23 @@ func _build_bushes() -> void:
 
 
 func _build_animals() -> void:
-	_add_animal("Deer", "deer", Vector3(-3.5, 0.0, -9.5), Color(0.49, 0.42, 0.34))
-	_add_animal("Skunk", "skunk", Vector3(3.5, 0.0, -9.5), Color(0.23, 0.25, 0.27))
-
-
-func _add_animal(node_name: String, kind: String, at: Vector3, tint: Color) -> void:
-	var animal := Node3D.new()
-	animal.name = node_name
-	animal.position = at
-	animal.set_script(ANIMAL_SCRIPT)
-	animal.set("animal_kind", kind)
-	if kind == "skunk":
-		animal.add_to_group("test_skunks")
-	add_child(animal)
-	var body := MeshInstance3D.new()
-	var capsule := CapsuleMesh.new()
-	capsule.radius = 0.38 if kind == "deer" else 0.3
-	capsule.height = 1.1 if kind == "deer" else 0.65
-	body.mesh = capsule
-	body.position.y = capsule.height * 0.5
-	body.material_override = _material(tint)
-	animal.add_child(body)
-	var head := MeshInstance3D.new()
-	var head_mesh := SphereMesh.new()
-	head_mesh.radius = 0.24 if kind == "deer" else 0.2
-	head_mesh.height = 0.42 if kind == "deer" else 0.36
-	head.mesh = head_mesh
-	head.position = Vector3(0.0, 0.9, -0.28)
-	head.material_override = _material(tint.lightened(0.12))
-	animal.add_child(head)
-
+	var deer := DEER.instantiate() as Node3D
+	deer.name = "Deer"
+	deer.position = Vector3(-3.5, 0.05, -9.5)
+	add_child(deer)
+	var skunk := SKUNK.instantiate() as Node3D
+	skunk.name = "Skunk"
+	skunk.position = Vector3(3.5, 0.05, -9.5)
+	add_child(skunk)
+	var base := Marker3D.new()
+	base.name = "RobotBase"
+	base.position = Vector3(5, 0.05, 10.5)
+	add_child(base)
 
 func _build_fertilizer_pickups() -> void:
-	for index in range(5):
-		var item := ITEM_SCENE.instantiate() as RigidBody3D
-		item.name = "FertilizerPickup%d" % (index + 1)
-		item.set("definition", FERTILIZER)
-		item.position = Vector3(-3.2 + (index % 3) * 1.2, 0.2, 8.0 - floori(float(index) / 3.0) * 1.2)
-		add_child(item)
+	var repository := preload("res://scenes/entities/items/fertilizer_repository.tscn").instantiate() as Node3D
+	repository.position = Vector3(-3.2, 0, 8)
+	add_child(repository)
 
 
 func _build_buzzy() -> void:
@@ -294,13 +310,7 @@ func _build_buzzy() -> void:
 	add_child(buzzy)
 	buzzy.add_to_group("interactables")
 	buzzy.set_script(preload("res://scripts/world/test_buzzy.gd"))
-	var projection := MeshInstance3D.new()
-	var mesh := SphereMesh.new()
-	mesh.radius = 0.38
-	mesh.height = 0.76
-	projection.mesh = mesh
-	projection.material_override = _material(Color(0.1, 0.8, 1.0, 0.75), true)
-	buzzy.add_child(projection)
+	buzzy.add_child(preload("res://scenes/entities/npcs/buzzy_projection.tscn").instantiate())
 	var collision := CollisionShape3D.new()
 	var shape := SphereShape3D.new()
 	shape.radius = 0.45
@@ -337,14 +347,6 @@ func _build_player() -> void:
 	_player.name = "Player"
 	_player.position = Vector3(0.0, 0.9, 9.4)
 	add_child(_player)
-	var inventory: Node = _player.get_node("Inventory")
-	if current_day == 1:
-		inventory.call("set_slot_item", 0, FUSE)
-	if current_day == 2:
-		var restored_panel := get_node_or_null("PowerPanel")
-		if restored_panel != null:
-			restored_panel.call("accept_item", FUSE, _player)
-		inventory.call("_refresh_hud")
 
 
 func _build_hud() -> void:
@@ -364,12 +366,14 @@ func _build_hud() -> void:
 	_notebook_panel.visible = false
 	layer.add_child(_notebook_panel)
 	var margin := MarginContainer.new()
+	margin.name = "Margin"
 	margin.add_theme_constant_override("margin_left", 24)
 	margin.add_theme_constant_override("margin_right", 24)
 	margin.add_theme_constant_override("margin_top", 20)
 	margin.add_theme_constant_override("margin_bottom", 20)
 	_notebook_panel.add_child(margin)
 	_notebook_text = Label.new()
+	_notebook_text.name = "NotebookText"
 	_notebook_text.add_theme_font_size_override("font_size", 20)
 	_notebook_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	margin.add_child(_notebook_text)
@@ -422,3 +426,11 @@ func _build_npc_test_door() -> void:
 	label.position = Vector3(6, 2.8, 9)
 	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	add_child(label)
+
+
+func _build_fuse_supply() -> void:
+	var fuse := ITEM_SCENE.instantiate() as RigidBody3D
+	fuse.name = "FuseSupply"
+	fuse.definition = FUSE
+	fuse.position = Vector3(-1.5, 0.4, 8)
+	add_child(fuse)

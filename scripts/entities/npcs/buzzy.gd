@@ -1,15 +1,14 @@
 extends StaticBody3D
 @onready var reserve_state: Node = get_node("/root/ReserveState")
 @onready var label: Label3D = $StateLabel
-@onready var projection: MeshInstance3D = $Projection
 
 func _ready() -> void:
 	add_to_group("interactables")
+	add_to_group("npc_spacing_obstacles")
 	reserve_state.changed.connect(_refresh)
 	_refresh()
 
 func _refresh() -> void:
-	projection.visible = reserve_state.power_restored
 	label.text = "Buzzy · E conversar" if reserve_state.power_restored else "Emissor sem energia"
 
 func interact(_actor: Node) -> void:
@@ -21,7 +20,7 @@ func interact(_actor: Node) -> void:
 		reserve_state.changed.emit()
 		_status("Buzzy: Bem-vindo! Fertilize os cinco arbustos. No Habitat 1, respeite os ninhos e evite ficar cercado. O seguro não cobre curiosidade.")
 	else:
-		_status("Buzzy: %d/5 arbustos. Kiwi protege ovos; Pukeko prefere reuniões em grupo. Com você no centro." % reserve_state.fertilized_ids.size())
+		_status("Buzzy: %d/%d arbustos. Kiwi protege ovos; Casuário prefere reuniões em grupo. Com você no centro." % [get_tree().current_scene.get_room_bushes().filter(func(bush): return bush.is_in_group("fertilized_bushes")).size(), 10 if reserve_state.day >= 2 else 5])
 
 
 func _status(message: String) -> void:

@@ -1,0 +1,144 @@
+[gd_scene format=3]
+
+
+[sub_resource type="StandardMaterial3D" id="Material_Handle"]
+albedo_color = Color(0.345098, 0.364706, 0.368627, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_Handle"]
+size = Vector3(0.19, 0.16, 0.17)
+
+[sub_resource type="StandardMaterial3D" id="Material_BackCap"]
+albedo_color = Color(0.545098, 0.501961, 0.419608, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_BackCap"]
+size = Vector3(0.041, 0.18, 0.18)
+
+[sub_resource type="StandardMaterial3D" id="Material_Housing"]
+albedo_color = Color(0.666667, 0.694118, 0.666667, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_Housing"]
+size = Vector3(0.22, 0.154, 0.195)
+
+[sub_resource type="StandardMaterial3D" id="Material_Display"]
+albedo_color = Color(0.25098, 0.294118, 0.278431, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_Display"]
+size = Vector3(0.109, 0.02, 0.111)
+
+[sub_resource type="StandardMaterial3D" id="Material_Indicator"]
+albedo_color = Color(0.631373, 0.709804, 0.639216, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_Indicator"]
+size = Vector3(0.047, 0.009, 0.032)
+
+[sub_resource type="StandardMaterial3D" id="Material_Collar"]
+albedo_color = Color(0.4, 0.427451, 0.411765, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_Collar"]
+top_radius = 0.082
+bottom_radius = 0.082
+height = 0.063
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Material_Needle"]
+albedo_color = Color(0.756863, 0.768627, 0.717647, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_Needle"]
+top_radius = 0.027
+bottom_radius = 0.027
+height = 0.18
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Material_Tip"]
+albedo_color = Color(0.560784, 0.584314, 0.529412, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_Tip"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.057
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Material_Vial"]
+albedo_color = Color(0.494118, 0.529412, 0.462745, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_Vial"]
+top_radius = 0.052
+bottom_radius = 0.052
+height = 0.165
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Material_VialLock"]
+albedo_color = Color(0.333333, 0.356863, 0.333333, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_VialLock"]
+size = Vector3(0.04, 0.1, 0.112)
+
+[node name="SampleProbe" type="Node3D"]
+
+[node name="Handle" type="MeshInstance3D" parent="."]
+position = Vector3(-0.182, 0, 0)
+material_override = SubResource("Material_Handle")
+mesh = SubResource("Mesh_Handle")
+
+[node name="BackCap" type="MeshInstance3D" parent="."]
+position = Vector3(-0.29, 0, 0)
+material_override = SubResource("Material_BackCap")
+mesh = SubResource("Mesh_BackCap")
+
+[node name="Housing" type="MeshInstance3D" parent="."]
+position = Vector3(-0.025, 0, 0)
+material_override = SubResource("Material_Housing")
+mesh = SubResource("Mesh_Housing")
+
+[node name="Display" type="MeshInstance3D" parent="."]
+position = Vector3(-0.042, 0.083, 0.01)
+material_override = SubResource("Material_Display")
+mesh = SubResource("Mesh_Display")
+
+[node name="Indicator" type="MeshInstance3D" parent="."]
+position = Vector3(-0.059, 0.095, 0.027)
+material_override = SubResource("Material_Indicator")
+mesh = SubResource("Mesh_Indicator")
+
+[node name="Collar" type="MeshInstance3D" parent="."]
+position = Vector3(0.115, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_Collar")
+mesh = SubResource("Mesh_Collar")
+
+[node name="Needle" type="MeshInstance3D" parent="."]
+position = Vector3(0.217, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_Needle")
+mesh = SubResource("Mesh_Needle")
+
+[node name="Tip" type="MeshInstance3D" parent="."]
+position = Vector3(0.329, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_Tip")
+mesh = SubResource("Mesh_Tip")
+
+[node name="Vial" type="MeshInstance3D" parent="."]
+position = Vector3(0.017, -0.085, 0.104)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_Vial")
+mesh = SubResource("Mesh_Vial")
+
+[node name="VialLock" type="MeshInstance3D" parent="."]
+position = Vector3(-0.074, -0.087, 0.1)
+material_override = SubResource("Material_VialLock")
+mesh = SubResource("Mesh_VialLock")

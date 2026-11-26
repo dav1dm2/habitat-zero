@@ -1,0 +1,94 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://blglwnmx58e7d"]
+
+[ext_resource type="Texture2D" uid="uid://dgkuplextkdo4" path="res://assets/characters/buzzy/buzzy_atlas.png" id="1_atlas"]
+
+[sub_resource type="AtlasTexture" id="Pose7"]
+atlas = ExtResource("1_atlas")
+region = Rect2(288, 96, 96, 96)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose5"]
+atlas = ExtResource("1_atlas")
+region = Rect2(96, 96, 96, 96)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose4"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 96, 96, 96)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose1"]
+atlas = ExtResource("1_atlas")
+region = Rect2(96, 0, 96, 96)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose6"]
+atlas = ExtResource("1_atlas")
+region = Rect2(192, 96, 96, 96)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose0"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 0, 96, 96)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose2"]
+atlas = ExtResource("1_atlas")
+region = Rect2(192, 0, 96, 96)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose3"]
+atlas = ExtResource("1_atlas")
+region = Rect2(288, 0, 96, 96)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("Pose7")
+}, {
+"duration": 2.0,
+"texture": SubResource("Pose5")
+}, {
+"duration": 4.0,
+"texture": SubResource("Pose4")
+}, {
+"duration": 2.0,
+"texture": SubResource("Pose1")
+}],
+"loop": 1,
+"name": &"dialogue",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose6")
+}],
+"loop": 0,
+"name": &"glitch",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("Pose0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose1")
+}, {
+"duration": 4.0,
+"texture": SubResource("Pose0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose3")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}]

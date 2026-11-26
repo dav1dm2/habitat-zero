@@ -1,0 +1,108 @@
+{
+  "room": "res://scenes/levels/attis_interior.tscn",
+  "rows": [
+    {
+      "hits": [],
+      "pos": "(-0.152684, 24.14667, -50.21044)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    },
+    {
+      "hits": [],
+      "pos": "(-0.082985, 23.37907, -52.63498)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    },
+    {
+      "hits": [],
+      "pos": "(-0.038544, 23.80109, -55.40789)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    },
+    {
+      "hits": [
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.363823, 24.05, -57.98667)"
+        },
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.363518, 24.05, -58.00427)"
+        }
+      ],
+      "pos": "(-0.013518, 24.05024, -58.35427)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    },
+    {
+      "hits": [
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.35811, 24.05, -60.88992)"
+        },
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.358098, 24.05, -60.90752)"
+        }
+      ],
+      "pos": "(-0.008098, 24.05024, -61.25751)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    },
+    {
+      "hits": [
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.356033, 24.05, -63.74999)"
+        },
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.35602, 24.05, -63.76759)"
+        }
+      ],
+      "pos": "(-0.006019, 24.05013, -64.11759)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    },
+    {
+      "hits": [
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.35386, 24.05, -66.73875)"
+        },
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.353846, 24.05, -66.75771)"
+        }
+      ],
+      "pos": "(-0.003846, 24.05087, -67.10771)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    },
+    {
+      "hits": [
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.351875, 24.05, -69.47021)"
+        },
+        {
+          "collider": "/root/AttisForest/BaseNoTopo/InstalacoesNaRocha/Patamar",
+          "normal": "(0.0, 1.0, 0.0)",
+          "point": "(-0.351862, 24.05, -69.48781)"
+        }
+      ],
+      "pos": "(-0.001862, 24.05013, -69.83781)",
+      "stalled": 0.0,
+      "state": "indo para outra sala"
+    }
+  ]
+}

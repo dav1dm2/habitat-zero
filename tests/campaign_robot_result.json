@@ -1,0 +1,38 @@
+{
+  "paths": [
+    {
+      "pass": true,
+      "point": "(-3.1, 0.05, 6.8)"
+    },
+    {
+      "pass": true,
+      "point": "(2.8, 0.05, 5.3)"
+    },
+    {
+      "pass": true,
+      "point": "(5.3, 0.05, -0.5)"
+    },
+    {
+      "pass": true,
+      "point": "(-7.5, 0.96, -8.2)"
+    },
+    {
+      "pass": true,
+      "point": "(0.0, 0.05, 1.8)"
+    },
+    {
+      "pass": true,
+      "point": "(-6.0, 0.05, -14.0)"
+    },
+    {
+      "pass": true,
+      "point": "(6.0, 0.05, -14.0)"
+    }
+  ],
+  "returned": true,
+  "robot_position": "(-5.338676, 0.000132, 0.072462)",
+  "room": "res://scenes/levels/attis_interior.tscn",
+  "seconds": 34.3499999999993,
+  "state": "na base",
+  "treated": true
+}

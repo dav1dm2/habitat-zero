@@ -1,0 +1,20 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+FREEDOM OK Todos os 35 decorativos e cinco arbustos iniciais permitem coleta
+FREEDOM OK Arbusto decorativo fornece amostra
+FREEDOM OK Outro coletor não repete arbusto no mesmo dia
+FREEDOM OK Esvaziar não libera arbusto usado no dia
+FREEDOM OK Checkpoint preserva registro diário
+FREEDOM OK Planta antes exclusiva de fertilização fornece amostra
+FREEDOM OK Planta ainda não surgida não fornece amostra
+FREEDOM OK Mesmo arbusto volta a fornecer no dia seguinte
+FREEDOM OK Dia 2 permite todos os 45 arbustos presentes
+FREEDOM OK Robô respeita planta usada pelo jogador
+FREEDOM OK Robô aceita planta do dia anterior
+FREEDOM OK Jogador não repete planta usada pelo robô
+FREEDOM OK Arbusto decorativo tem alvo físico para M1 sem bloquear caminhada
+FREEDOM OK Habitat 1 permite seis plantas no Dia 2
+FREEDOM OK Três plantas antigas completam coleta do Dia 2 no H1
+FREEDOM OK Nova campanha limpa registro de plantas
+FREEDOM_RESULT 16/16 []

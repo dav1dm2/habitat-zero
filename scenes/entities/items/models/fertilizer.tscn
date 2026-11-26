@@ -1,0 +1,75 @@
+[gd_scene format=3]
+
+[ext_resource type="Mesh" path="res://scenes/entities/items/models/sack_shell.obj" id="SackMesh"]
+
+[sub_resource type="StandardMaterial3D" id="Material_FoldBottom"]
+albedo_color = Color(0.556863, 0.486275, 0.380392, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_FoldBottom"]
+size = Vector3(0.39, 0.025, 0.26)
+
+[sub_resource type="StandardMaterial3D" id="Material_Sack"]
+albedo_color = Color(0.72549, 0.647059, 0.521569, 1)
+roughness = 0.79
+
+
+[sub_resource type="StandardMaterial3D" id="Material_PaperLabel"]
+albedo_color = Color(0.839216, 0.8, 0.682353, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_PaperLabel"]
+size = Vector3(0.207, 0.016, 0.162)
+
+[sub_resource type="StandardMaterial3D" id="Material_Stripe"]
+albedo_color = Color(0.435294, 0.462745, 0.392157, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_Stripe"]
+size = Vector3(0.043, 0.008, 0.128)
+
+[sub_resource type="StandardMaterial3D" id="Material_FoldTop"]
+albedo_color = Color(0.623529, 0.541176, 0.411765, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_FoldTop"]
+size = Vector3(0.036, 0.065, 0.244)
+
+[sub_resource type="StandardMaterial3D" id="Material_Tie"]
+albedo_color = Color(0.447059, 0.388235, 0.317647, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_Tie"]
+size = Vector3(0.024, 0.028, 0.246)
+
+[node name="Fertilizer" type="Node3D"]
+
+[node name="FoldBottom" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.082, 0)
+material_override = SubResource("Material_FoldBottom")
+mesh = SubResource("Mesh_FoldBottom")
+
+[node name="Sack" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+material_override = SubResource("Material_Sack")
+mesh = ExtResource("SackMesh")
+
+[node name="PaperLabel" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.094, 0)
+material_override = SubResource("Material_PaperLabel")
+mesh = SubResource("Mesh_PaperLabel")
+
+[node name="Stripe" type="MeshInstance3D" parent="."]
+position = Vector3(-0.047, 0.104, 0)
+material_override = SubResource("Material_Stripe")
+mesh = SubResource("Mesh_Stripe")
+
+[node name="FoldTop" type="MeshInstance3D" parent="."]
+position = Vector3(0.223, 0, 0)
+material_override = SubResource("Material_FoldTop")
+mesh = SubResource("Mesh_FoldTop")
+
+[node name="Tie" type="MeshInstance3D" parent="."]
+position = Vector3(0.23, 0.037, 0)
+material_override = SubResource("Material_Tie")
+mesh = SubResource("Mesh_Tie")

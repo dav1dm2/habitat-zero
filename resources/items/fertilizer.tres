@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_definition")
 item_id = &"fertilizer"
-display_name = "Fertilizante"
+display_name = "Adubo"
 effect = 3
 pickup_color = Color(0.38, 0.68, 0.28, 1)

@@ -1,0 +1,5 @@
+Retro PSX Nature Pack — Elegant Crow
+https://elegantcrow.itch.io/retro-psx-nature-pack
+Author page states models are CC0; textures from AmbientCG, images from Pixabay.
+Selected files copied from user downloads for Attis prototype, 2026-11-24.
+GLB files contain geometry; textures assigned in Godot wrapper scenes.

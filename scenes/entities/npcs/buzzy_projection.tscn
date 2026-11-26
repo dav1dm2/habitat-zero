@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="SpriteFrames" path="res://assets/characters/buzzy/buzzy_frames.tres" id="1_frames"]
+[ext_resource type="Script" path="res://scripts/entities/npcs/buzzy_projection.gd" id="2_projection"]
+
+[node name="Projection" type="AnimatedSprite3D"]
+visible = false
+modulate = Color(0.88, 0.96, 1, 0.86)
+pixel_size = 0.007667
+billboard = 1
+texture_filter = 0
+sprite_frames = ExtResource("1_frames")
+animation = &"idle"
+script = ExtResource("2_projection")

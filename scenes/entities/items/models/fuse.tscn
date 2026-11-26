@@ -1,0 +1,96 @@
+[gd_scene format=3]
+
+
+[sub_resource type="StandardMaterial3D" id="Material_Core"]
+albedo_color = Color(0.678431, 0.67451, 0.619608, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_Core"]
+top_radius = 0.084
+bottom_radius = 0.084
+height = 0.31
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Material_SleeveLeft"]
+albedo_color = Color(0.282353, 0.294118, 0.294118, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_SleeveLeft"]
+top_radius = 0.105
+bottom_radius = 0.105
+height = 0.105
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Material_SleeveRight"]
+albedo_color = Color(0.282353, 0.294118, 0.294118, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_SleeveRight"]
+top_radius = 0.105
+bottom_radius = 0.105
+height = 0.105
+radial_segments = 8
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="Material_ContactLeft"]
+albedo_color = Color(0.631373, 0.486275, 0.313725, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_ContactLeft"]
+size = Vector3(0.07, 0.08, 0.13)
+
+[sub_resource type="StandardMaterial3D" id="Material_ContactRight"]
+albedo_color = Color(0.631373, 0.486275, 0.313725, 1)
+roughness = 0.79
+
+[sub_resource type="BoxMesh" id="Mesh_ContactRight"]
+size = Vector3(0.07, 0.08, 0.13)
+
+[sub_resource type="StandardMaterial3D" id="Material_RatingBand"]
+albedo_color = Color(0.572549, 0.396078, 0.298039, 1)
+roughness = 0.79
+
+[sub_resource type="CylinderMesh" id="Mesh_RatingBand"]
+top_radius = 0.086
+bottom_radius = 0.086
+height = 0.037
+radial_segments = 8
+rings = 0
+
+[node name="Fuse" type="Node3D"]
+
+[node name="Core" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_Core")
+mesh = SubResource("Mesh_Core")
+
+[node name="SleeveLeft" type="MeshInstance3D" parent="."]
+position = Vector3(-0.179, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_SleeveLeft")
+mesh = SubResource("Mesh_SleeveLeft")
+
+[node name="SleeveRight" type="MeshInstance3D" parent="."]
+position = Vector3(0.179, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_SleeveRight")
+mesh = SubResource("Mesh_SleeveRight")
+
+[node name="ContactLeft" type="MeshInstance3D" parent="."]
+position = Vector3(-0.25, 0, 0)
+material_override = SubResource("Material_ContactLeft")
+mesh = SubResource("Mesh_ContactLeft")
+
+[node name="ContactRight" type="MeshInstance3D" parent="."]
+position = Vector3(0.25, 0, 0)
+material_override = SubResource("Material_ContactRight")
+mesh = SubResource("Mesh_ContactRight")
+
+[node name="RatingBand" type="MeshInstance3D" parent="."]
+position = Vector3(0.048, 0, 0)
+rotation = Vector3(0, 0, 1.570796)
+material_override = SubResource("Material_RatingBand")
+mesh = SubResource("Mesh_RatingBand")

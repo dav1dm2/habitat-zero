@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "name": "Três áreas de trabalho carregadas mesmo nas instalações",
+      "passed": true
+    },
+    {
+      "name": "Dia 1 só tem três plantas visíveis no H1",
+      "passed": true
+    },
+    {
+      "name": "Dia 1 não permite ativar robô",
+      "passed": true
+    },
+    {
+      "name": "Buzzy explica trabalho manual no Dia 1",
+      "passed": true
+    },
+    {
+      "name": "Dois coletores do jogador preservados",
+      "passed": true
+    },
+    {
+      "name": "Cama inicia Dia 2 e renova entregas",
+      "passed": true
+    },
+    {
+      "name": "Dia 2 anuncia automação imediatamente",
+      "passed": true
+    },
+    {
+      "name": "Dia 2 tem seis plantas no H1 sem duplicação",
+      "passed": true
+    },
+    {
+      "name": "Dia 2 permite todos os arbustos presentes nas duas áreas",
+      "passed": true
+    },
+    {
+      "name": "Plantas do dia anterior continuam disponíveis para coleta",
+      "passed": true
+    },
+    {
+      "name": "Coletor antigo não pode misturar dia novo",
+      "passed": true
+    },
+    {
+      "name": "Contador diário exclui amostras antigas",
+      "passed": true
+    },
+    {
+      "name": "Ativação aguarda explicação de Buzzy",
+      "passed": true
+    },
+    {
+      "name": "Confirmação libera automação",
+      "passed": true
+    },
+    {
+      "name": "Bancada esvazia amostra antiga sem concluir hoje",
+      "passed": true
+    },
+    {
+      "name": "Caderno mostra tarefas novas e ativação",
+      "passed": true
+    },
+    {
+      "name": "Dia 2 permite ativar robô",
+      "passed": true
+    },
+    {
+      "name": "Visita do jogador ao H1 preserva ajudante",
+      "passed": true
+    },
+    {
+      "name": "Robô visita Attis e H1 sem trocar a cena do jogador",
+      "passed": true
+    },
+    {
+      "name": "Robô fertiliza os cinco arbustos novos",
+      "passed": true
+    },
+    {
+      "name": "Robô coleta três de cada origem e entrega ambas",
+      "passed": true
+    },
+    {
+      "name": "Entregas acontecem fisicamente na bancada",
+      "passed": true
+    },
+    {
+      "name": "Robô retorna à base após concluir tudo",
+      "passed": true
+    },
+    {
+      "name": "Nenhum coletor do jogador foi consumido pelo robô",
+      "passed": true
+    },
+    {
+      "name": "M1 coleta três plantas do H1 ainda não usadas pelo robô",
+      "passed": true
+    },
+    {
+      "name": "Entrega concorrente não duplica conclusão",
+      "passed": true
+    },
+    {
+      "name": "Tarefas do Dia 2 estão completas",
+      "passed": true
+    },
+    {
+      "name": "Entrega do jogador cancela coleta redundante do robô",
+      "passed": true
+    },
+    {
+      "name": "Morte reinicia tarefas atuais sem perder histórico",
+      "passed": true
+    },
+    {
+      "name": "Crescimento não duplica após reinício",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 30
+}

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://scripts/audio/soundtrack_settings.gd" id="1_settings"]
+[ext_resource type="AudioStream" path="res://assets/audio/title_1.mp3" id="2_title_1"]
+[ext_resource type="AudioStream" path="res://assets/audio/title_2.mp3" id="3_title_2"]
+[ext_resource type="AudioStream" path="res://assets/audio/blackout_1.mp3" id="4_blackout_1"]
+[ext_resource type="AudioStream" path="res://assets/audio/blackout_2.mp3" id="5_blackout_2"]
+[ext_resource type="AudioStream" path="res://assets/audio/regular_1.mp3" id="6_regular_1"]
+[ext_resource type="AudioStream" path="res://assets/audio/regular_2.mp3" id="7_regular_2"]
+[ext_resource type="AudioStream" path="res://assets/audio/dream_1.mp3" id="8_dream_1"]
+[ext_resource type="AudioStream" path="res://assets/audio/dream_2.mp3" id="9_dream_2"]
+[ext_resource type="AudioStream" path="res://assets/audio/ending.mp3" id="10_ending"]
+[ext_resource type="AudioStream" path="res://assets/audio/door_opening.wav" id="11_door"]
+
+[resource]
+script = ExtResource("1_settings")
+menu_tracks = Array[AudioStream]([ExtResource("2_title_1"), ExtResource("3_title_2")])
+blackout_tracks = Array[AudioStream]([ExtResource("4_blackout_1"), ExtResource("5_blackout_2")])
+powered_tracks = Array[AudioStream]([ExtResource("6_regular_1"), ExtResource("7_regular_2")])
+dream_first = ExtResource("8_dream_1")
+dream_second = ExtResource("9_dream_2")
+ending_track = ExtResource("10_ending")
+door_opening = ExtResource("11_door")

@@ -2,15 +2,26 @@ extends CharacterBody3D
 @onready var reserve_state: Node = get_node("/root/ReserveState")
 ## Locomoção física e ações comuns. Os recursos de cada espécie são cenas separadas.
 signal state_changed(value: String)
-@export_enum("Cervo", "Gambá", "Kiwi", "Pukeko") var species: int = 0
+signal presentation_changed(value: StringName)
+@export var event_only: bool = false
+@export_enum("normal", "dead", "ritual_wait", "ritual_approach") var event_state: String = "normal"
+@export var normal_sprite: Texture2D
+@export var dead_sprite: Texture2D
+@export var ritual_sprite: Texture2D
+var presentation_state: StringName = &"normal"
+var event_goal: Vector3
+var event_speed: float = 1.1
+
+@export_enum("Cervo", "Gambá", "Kiwi", "Casuário") var species: int = 0
 @export var display_name: String = "Cervo"
 @export var walk_speed: float = 1.3
-@export var run_speed: float = 3.6
+@export var run_speed: float = 6.8
+@export var personal_space: float = 1.5
 @export var attention_radius: float = 9.0
 @export var fear_radius: float = 4.5
 @export var territory_radius: float = 7.0
 @export var attack_range: float = 1.65
-@export var damage: float = 10.0
+@export var damage: float = 13.2
 @export var debug_labels: bool = true
 
 var state: String = "repouso"
@@ -38,6 +49,7 @@ func _ready() -> void:
 	_last_position = home
 	_rng.seed = hash(str(get_path()))
 	add_to_group("animals")
+	add_to_group("mobile_npcs")
 	if get_parent().has_method("register"):
 		group_controller = get_parent()
 		group_controller.register(self)
@@ -46,8 +58,16 @@ func _ready() -> void:
 	material.albedo_color = [Color("a78b65"), Color("515964"), Color("ac9867"), Color("424a71")][species]
 	visual.material_override = material
 	_set_state("vigia" if species >= 2 else "comendo")
+	set_event_state(event_state)
+	if event_only and not reserve_state.is_dream:
+		remove_from_group("animals")
+		remove_from_group("mobile_npcs")
+		set_physics_process(false)
 
 func _physics_process(delta: float) -> void:
+	if event_state != "normal":
+		_event_motion(delta)
+		return
 	player = get_tree().get_first_node_in_group("player") as Node3D
 	_goal_timer -= delta
 	_action_timer -= delta
@@ -66,12 +86,13 @@ func _physics_process(delta: float) -> void:
 			direction = direction.normalized()
 		else:
 			direction = Vector3.ZERO
-	var speed := run_speed if state in ["fugindo", "perseguindo"] else walk_speed
+	var speed := run_speed if state in ["fugindo", "perseguindo", "aproximando para ataque"] else walk_speed
 	if state in ["aviso", "atacando", "recuperando", "atenção", "observando", "vigia", "comendo"]:
 		direction = Vector3.ZERO
 	if _attack_timer >= 0.0:
 		direction = Vector3.ZERO
-	_apply_motion(direction * speed, delta)
+	var desired := preload("res://scripts/entities/npcs/npc_spacing.gd").velocity_for(self, direction * speed, speed, personal_space)
+	_apply_motion(desired, delta)
 	if direction.length_squared() > 0.1 and global_position.distance_to(_last_position) < 0.005:
 		_stuck_time += delta
 	else:
@@ -90,8 +111,8 @@ func _physics_process(delta: float) -> void:
 			visual.rotation.y = atan2(gaze.x, gaze.z)
 
 func _apply_motion(horizontal: Vector3, delta: float) -> void:
-	velocity.x = move_toward(velocity.x, horizontal.x, 10.0 * delta)
-	velocity.z = move_toward(velocity.z, horizontal.z, 10.0 * delta)
+	velocity.x = move_toward(velocity.x, horizontal.x, 24.0 * delta)
+	velocity.z = move_toward(velocity.z, horizontal.z, 24.0 * delta)
 	if not is_on_floor():
 		velocity.y -= 9.8 * delta
 	else:
@@ -111,14 +132,14 @@ func in_attack_range(actor: Node3D) -> bool:
 
 func _decide(delta: float) -> void:
 	var valid_player := is_instance_valid(player)
-	var visible := valid_player and can_see(player)
+	var player_visible := valid_player and can_see(player)
 	var distance := global_position.distance_to(player.global_position) if valid_player else INF
-	if visible and distance < attention_radius:
+	if player_visible and distance < attention_radius:
 		_memory = 1.4
 	else:
 		_memory = maxf(0.0, _memory - delta)
 	if species == 3:
-		_decide_pukeko(delta)
+		_decide_casuario(delta)
 		return
 	if species == 2:
 		_decide_kiwi(delta)
@@ -126,15 +147,15 @@ func _decide(delta: float) -> void:
 	var tolerant: bool = species == 0 and reserve_state.deer_tolerant()
 	var territorial: bool = species == 1 and reserve_state.day >= 2
 	if territorial:
-		var intruder := visible and player.global_position.distance_to(home) < territory_radius
+		var intruder := player_visible and player.global_position.distance_to(home) < territory_radius
 		_defend(intruder, home, delta)
 		return
 	if tolerant:
 		_fleeing = false
-		if visible and distance < attention_radius:
+		if player_visible and distance < attention_radius:
 			_set_state("observando")
 			return
-	elif visible and distance < fear_radius:
+	elif player_visible and distance < fear_radius:
 		_fleeing = true
 	if _fleeing:
 		if (distance > attention_radius or _memory <= 0.0):
@@ -150,7 +171,7 @@ func _decide(delta: float) -> void:
 					away = Vector3.FORWARD
 				_set_goal(_choose_flee_goal(away.normalized()))
 			return
-	if visible and distance < attention_radius:
+	if player_visible and distance < attention_radius:
 		_set_state("atenção")
 	else:
 		_routine()
@@ -195,29 +216,37 @@ func _decide_kiwi(delta: float) -> void:
 		cancel_attack()
 		_routine()
 
-func _decide_pukeko(delta: float) -> void:
-	if group_controller == null or not is_instance_valid(group_controller.target):
-		cancel_attack()
-		_warning_time = 0.0
+func _decide_casuario(delta: float) -> void:
+	if group_controller == null:
 		_return_or_idle("vigia")
 		return
-	var target := group_controller.target as Node3D
-	if target.global_position.distance_to(group_controller.global_position) > group_controller.territory_radius:
+	if group_controller.pack_state == "fugindo":
+		cancel_attack()
+		_warning_time = 0.0
+		_set_state("fugindo")
+		if _goal_timer <= 0.0:
+			_set_goal(group_controller.retreat_position(self))
+		return
+	if not is_instance_valid(group_controller.target) or group_controller.pack_state == "vigia":
 		cancel_attack()
 		_warning_time = 0.0
 		_return_or_idle("vigia")
 		return
 	_warning_time += delta
-	if group_controller.contact_count(target) >= 2 and _warning_time >= 0.85:
-		_set_state("aviso")
-		_try_attack()
+	if group_controller.pack_state == "avançando":
+		if group_controller.contact_count(player) >= 2 and _warning_time >= 0.85 and in_attack_range(player):
+			_set_state("aviso")
+			_try_attack()
+		else:
+			cancel_attack()
+			_set_state("aproximando para ataque")
+			if _goal_timer <= 0.0:
+				_set_goal(group_controller.assault_position(self))
 	else:
 		cancel_attack()
 		_set_state("cercando")
 		if _goal_timer <= 0.0:
-			var index: int = group_controller.members.find(self)
-			var angle := TAU * float(index) / maxf(1.0, group_controller.members.size())
-			_set_goal(target.global_position + Vector3(cos(angle), 0.0, sin(angle)) * 1.05)
+			_set_goal(group_controller.ring_position(self))
 
 func _defend(intruder: bool, return_point: Vector3, delta: float) -> void:
 	if not intruder:
@@ -243,6 +272,8 @@ func _defend(intruder: bool, return_point: Vector3, delta: float) -> void:
 			_set_goal(player.global_position)
 
 func _attack_allowed() -> bool:
+	if event_state != "normal":
+		return false
 	if not in_attack_range(player):
 		return false
 	if species == 0:
@@ -251,7 +282,7 @@ func _attack_allowed() -> bool:
 		return reserve_state.day >= 2 and player.global_position.distance_to(home) < territory_radius
 	if species == 2:
 		return group_controller != null and group_controller.has_eggs and player.global_position.distance_to(group_controller.global_position) < 5.0
-	return group_controller != null and group_controller.contact_count(player) >= 2 and player.global_position.distance_to(group_controller.global_position) <= group_controller.territory_radius
+	return group_controller != null and group_controller.pack_state == "avançando" and group_controller.inside_habitat(player) and group_controller.contact_count(player) >= 2
 
 func _try_attack() -> void:
 	if _attack_timer < 0.0 and _cooldown <= 0.0 and _attack_allowed():
@@ -305,3 +336,59 @@ func _set_state(value: String) -> void:
 	if state != value:
 		state = value
 		state_changed.emit(value)
+
+func set_event_state(value: String) -> void:
+	event_state = value
+	if value == "dead":
+		remove_from_group("mobile_npcs")
+	presentation_state = StringName(value)
+	cancel_attack()
+	velocity = Vector3.ZERO
+	_set_state(value)
+	var texture: Texture2D = normal_sprite
+	if value == "dead":
+		texture = dead_sprite
+	elif value.begins_with("ritual"):
+		texture = ritual_sprite
+	var sprite := get_node_or_null("EventSprite") as Sprite3D
+	if texture != null:
+		if sprite == null:
+			sprite = Sprite3D.new()
+			sprite.name = "EventSprite"
+			sprite.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+			sprite.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+			sprite.shaded = true
+			add_child(sprite)
+		sprite.shaded = true
+		sprite.texture = texture
+		sprite.pixel_size = 0.012 if value == "dead" else 0.016
+		sprite.position.y = 0.38 if value == "dead" else 1.15
+		sprite.visible = true
+		visual.visible = false
+	else:
+		visual.visible = not get_node_or_null("EventSprite") is AnimatedSprite3D
+		visual.rotation.z = PI*0.5 if value == "dead" else 0.0
+		if sprite != null:
+			sprite.visible = false
+	if value != "normal":
+		label.visible = false
+		collision_mask = 1
+	presentation_changed.emit(presentation_state)
+
+func activate_event() -> void:
+	add_to_group("animals")
+	if event_state != "dead":
+		add_to_group("mobile_npcs")
+	set_physics_process(true)
+
+func _event_motion(delta: float) -> void:
+	var desired := Vector3.ZERO
+	if event_state == "ritual_approach":
+		if agent.target_position.distance_to(event_goal) > 0.1:
+			agent.target_position = event_goal
+		if NavigationServer3D.map_get_iteration_id(agent.get_navigation_map()) > 0 and not agent.is_navigation_finished():
+			desired = agent.get_next_path_position()-global_position
+			desired.y = 0
+			if desired.length() > 0.12:
+				desired = desired.normalized()*event_speed
+	_apply_motion(desired,delta)

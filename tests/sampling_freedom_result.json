@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "name": "Todos os 35 decorativos e cinco arbustos iniciais permitem coleta",
+      "passed": true
+    },
+    {
+      "name": "Arbusto decorativo fornece amostra",
+      "passed": true
+    },
+    {
+      "name": "Outro coletor não repete arbusto no mesmo dia",
+      "passed": true
+    },
+    {
+      "name": "Esvaziar não libera arbusto usado no dia",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint preserva registro diário",
+      "passed": true
+    },
+    {
+      "name": "Planta antes exclusiva de fertilização fornece amostra",
+      "passed": true
+    },
+    {
+      "name": "Planta ainda não surgida não fornece amostra",
+      "passed": true
+    },
+    {
+      "name": "Mesmo arbusto volta a fornecer no dia seguinte",
+      "passed": true
+    },
+    {
+      "name": "Dia 2 permite todos os 45 arbustos presentes",
+      "passed": true
+    },
+    {
+      "name": "Robô respeita planta usada pelo jogador",
+      "passed": true
+    },
+    {
+      "name": "Robô aceita planta do dia anterior",
+      "passed": true
+    },
+    {
+      "name": "Jogador não repete planta usada pelo robô",
+      "passed": true
+    },
+    {
+      "name": "Arbusto decorativo tem alvo físico para M1 sem bloquear caminhada",
+      "passed": true
+    },
+    {
+      "name": "Habitat 1 permite seis plantas no Dia 2",
+      "passed": true
+    },
+    {
+      "name": "Três plantas antigas completam coleta do Dia 2 no H1",
+      "passed": true
+    },
+    {
+      "name": "Nova campanha limpa registro de plantas",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 16
+}

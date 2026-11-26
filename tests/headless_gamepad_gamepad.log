@@ -1,0 +1,37 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+GAMEPAD OK Mapas preservam teclado e incluem analógico
+GAMEPAD OK Ações cobrem inventário, caderno e pausa
+GAMEPAD OK Deadzones separadas para movimento e olhar
+GAMEPAD OK Gamepad ativa dicas Xbox no menu
+GAMEPAD OK A inicia novo jogo sem mouse
+GAMEPAD OK A de confirmar não causa pulo ao entrar
+GAMEPAD OK HUD muda para controle
+GAMEPAD OK Pequeno ruído no analógico não move jogador
+GAMEPAD OK Inclinação do analógico controla velocidade
+GAMEPAD OK Analógico direito olha horizontal e verticalmente
+GAMEPAD OK Câmera manual respeita bloqueios de interface/cutscene
+GAMEPAD OK Y alterna lanterna
+GAMEPAD OK B alterna agachamento sem precisar segurar
+GAMEPAD OK L3 alterna corrida e gasta estamina
+GAMEPAD OK Parar encerra corrida alternada
+GAMEPAD OK LT também permite correr segurando
+GAMEPAD OK RB seleciona próximo slot
+GAMEPAD OK LB seleciona slot anterior
+GAMEPAD OK View abre caderno com foco de botão
+GAMEPAD OK Direcional para cima navega sem fechar caderno
+GAMEPAD OK Analógico não move câmera atrás do caderno
+GAMEPAD OK B fecha caderno e libera jogador
+GAMEPAD OK Menu/Start pausa e foca Retomar
+GAMEPAD OK B retoma pela pausa
+GAMEPAD OK RT coleta amostra física sem consumir ferramenta
+GAMEPAD OK Oscilação do gatilho segurado não repete uso
+GAMEPAD OK Soltar e apertar RT permite nova coleta
+GAMEPAD OK Direcional para baixo arremessa item
+GAMEPAD OK X recolhe item físico
+GAMEPAD OK Dicas de interação usam X e RT
+GAMEPAD OK Teclado reassume dicas e slots
+GAMEPAD OK Desconexão do controle pausa campanha
+GAMEPAD OK Desconexão não desfaz pausa já aberta
+GAMEPAD_RESULT 33/33 []

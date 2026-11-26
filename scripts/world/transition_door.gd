@@ -5,13 +5,23 @@ const TRANSITION_MANAGER_NAME: NodePath = NodePath("SceneTransitionManager")
 
 @export_file("*.tscn") var destination_scene: String = ""
 @export var destination_door_path: NodePath
+@export var prompt_action := "Abrir porta"
+@export var prompt_offset := Vector3(0.0, 1.1, 0.0)
 
 
 func _ready() -> void:
 	add_to_group("interactables")
+	add_to_group("hud_interactables")
+
+
+func interaction_prompt() -> String:
+	return "E  •  " + prompt_action
 
 
 func interact(_actor: Node) -> void:
+	if get_node("/root/ReserveState").is_dream and destination_scene.ends_with("habitat_1.tscn"):
+		get_node("/root/DemoInterface").show_status("A porta está sem energia.")
+		return
 	if destination_scene.is_empty():
 		push_error("A porta '%s' não tem uma cena de destino configurada." % name)
 		return

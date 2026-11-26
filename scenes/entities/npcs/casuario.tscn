@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://scripts/entities/npcs/animal_controller.gd" id="1"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/casuario/casuario_128.tres" id="2_frames"]
+[ext_resource type="Script" path="res://scripts/entities/npcs/ground_animal_billboard.gd" id="3_billboard"]
 [sub_resource type="CapsuleShape3D" id="Body"]
 radius = 0.28
 height = 1.0
@@ -10,15 +12,19 @@ height = 1.0
 [sub_resource type="BoxMesh" id="Head"]
 size = Vector3(0.18, 0.18, 0.28)
 
-[node name="Pukeko" type="CharacterBody3D"]
+[sub_resource type="StandardMaterial3D" id="SpeciesMaterial"]
+albedo_color = Color(0.26, 0.29, 0.44, 1)
+
+[node name="Casuario" type="CharacterBody3D"]
 collision_layer = 8
 collision_mask = 9
 floor_snap_length = 0.6
 floor_max_angle = 0.7
 script = ExtResource("1")
 species = 3
-display_name = "Pukeko"
-walk_speed = 1.8
+run_speed = 7.0
+display_name = "Casuário"
+walk_speed = 2.1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 position = Vector3(0, 0.5, 0)
@@ -26,11 +32,23 @@ shape = SubResource("Body")
 
 [node name="Visual" type="MeshInstance3D" parent="."]
 position = Vector3(0, 0.5, 0)
+visible = false
 mesh = SubResource("Mesh")
+material_override = SubResource("SpeciesMaterial")
 
 [node name="Head" type="MeshInstance3D" parent="Visual"]
 position = Vector3(0, 0.18, -0.28)
 mesh = SubResource("Head")
+
+[node name="EventSprite" type="AnimatedSprite3D" parent="."]
+billboard = 2
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = ExtResource("2_frames")
+animation = &"neutro"
+script = ExtResource("3_billboard")
+frame_world_size = 2.45
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.75
@@ -38,9 +56,9 @@ target_desired_distance = 0.5
 radius = 0.28
 
 [node name="StateLabel" type="Label3D" parent="."]
-position = Vector3(0, 1.5, 0)
+position = Vector3(0, 2.05, 0)
 billboard = 1
 font_size = 28
 pixel_size = 0.009
 no_depth_test = false
-text = "Pukeko"
+text = "Casuário"

@@ -1,0 +1,210 @@
+{
+  "checks": [
+    {
+      "name": "Itens iniciais: carta e fusível",
+      "passed": true
+    },
+    {
+      "name": "Névoa suavizada até 26 m",
+      "passed": true
+    },
+    {
+      "name": "Carta arquivada e movimento bloqueado",
+      "passed": true
+    },
+    {
+      "name": "Q libera slot e cria uma carta física",
+      "passed": true
+    },
+    {
+      "name": "Carta fina não atravessa o terreno após arremesso",
+      "passed": true
+    },
+    {
+      "name": "Porta entra sem energia",
+      "passed": true
+    },
+    {
+      "name": "Chegada pareada e altura correta",
+      "passed": true
+    },
+    {
+      "name": "Inventário preserva slot vazio e fusível",
+      "passed": true
+    },
+    {
+      "name": "Robô tem base no carregador interno",
+      "passed": true
+    },
+    {
+      "name": "Robô não ativa antes da energia",
+      "passed": true
+    },
+    {
+      "name": "Carregador conectado à saída pela navegação",
+      "passed": true
+    },
+    {
+      "name": "Radiação causa dano na sala de máquinas",
+      "passed": true
+    },
+    {
+      "name": "M1 instala e consome fusível",
+      "passed": true
+    },
+    {
+      "name": "Painel abre interface 2D com mouse livre",
+      "passed": true
+    },
+    {
+      "name": "Puzzle não pausa radiação",
+      "passed": true
+    },
+    {
+      "name": "Erro reinicia disjuntores e preserva fusível",
+      "passed": true
+    },
+    {
+      "name": "Carta reaparece uma única vez no retorno",
+      "passed": true
+    },
+    {
+      "name": "Posição da carta preservada",
+      "passed": true
+    },
+    {
+      "name": "Rotação da carta preservada com tolerância física de 0,02 rad",
+      "passed": true
+    },
+    {
+      "name": "Retorno usa porta alta, não spawn da estrada",
+      "passed": true
+    },
+    {
+      "name": "Fusível instalado persiste entre áreas",
+      "passed": true
+    },
+    {
+      "name": "Sequência dos botões restaura energia",
+      "passed": true
+    },
+    {
+      "name": "Iluminação interna acende",
+      "passed": true
+    },
+    {
+      "name": "Conserto encerra dano radioativo",
+      "passed": true
+    },
+    {
+      "name": "Buzzy projeta e oferece briefing",
+      "passed": true
+    },
+    {
+      "name": "Confirmação registra briefing e tarefas",
+      "passed": true
+    },
+    {
+      "name": "Almoxarifado fornece quatro fertilizantes",
+      "passed": true
+    },
+    {
+      "name": "Depósito guarda sem duplicar",
+      "passed": true
+    },
+    {
+      "name": "Robô continua bloqueado no Dia 1 após energia",
+      "passed": true
+    },
+    {
+      "name": "Item pode ser largado também no interior",
+      "passed": true
+    },
+    {
+      "name": "Energia e briefing sobrevivem ao retorno",
+      "passed": true
+    },
+    {
+      "name": "Cinco arbustos iniciais disponíveis",
+      "passed": true
+    },
+    {
+      "name": "Depósito preservado entre cenas",
+      "passed": true
+    },
+    {
+      "name": "Carta largada pode ser recolhida",
+      "passed": true
+    },
+    {
+      "name": "Item largado no interior persiste",
+      "passed": true
+    },
+    {
+      "name": "Carta recolhida não duplica na próxima visita",
+      "passed": true
+    },
+    {
+      "name": "Morte reinicia na chegada de Attis",
+      "passed": true
+    },
+    {
+      "name": "Morte restaura carta e fusível iniciais",
+      "passed": true
+    },
+    {
+      "name": "Morte apaga progresso do dia",
+      "passed": true
+    },
+    {
+      "name": "Morte restaura mundo e depósito do checkpoint",
+      "passed": true
+    },
+    {
+      "name": "Morte fecha modal e recupera vida",
+      "passed": true
+    },
+    {
+      "name": "Interface aberta antes da morte radioativa",
+      "passed": true
+    },
+    {
+      "name": "Morte dentro do puzzle retorna à chegada",
+      "passed": true
+    },
+    {
+      "name": "Morte dentro do puzzle fecha interface e libera controle",
+      "passed": true
+    },
+    {
+      "name": "Fusível volta ao inventário após morte no painel",
+      "passed": true
+    },
+    {
+      "name": "Cama não ignora análises pendentes",
+      "passed": true
+    },
+    {
+      "name": "Análises registram duas origens sem duplicação",
+      "passed": true
+    },
+    {
+      "name": "Cama avança o dia após todos os critérios",
+      "passed": true
+    },
+    {
+      "name": "Dia 2 disponibiliza dez arbustos",
+      "passed": true
+    },
+    {
+      "name": "Morte no Dia 2 restaura alojamento e dia correto",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint do Dia 2 preserva energia/histórico e renova análises",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 51
+}

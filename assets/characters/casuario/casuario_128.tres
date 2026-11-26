@@ -1,0 +1,168 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://7lkgkbotm8vv"]
+
+[ext_resource type="Texture2D" uid="uid://djqdoodwln8fw" path="res://assets/characters/casuario/casuario_128.png" id="1_atlas"]
+
+[sub_resource type="AtlasTexture" id="Pose9"]
+atlas = ExtResource("1_atlas")
+region = Rect2(128, 256, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose3"]
+atlas = ExtResource("1_atlas")
+region = Rect2(384, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose8"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 256, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose4"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose5"]
+atlas = ExtResource("1_atlas")
+region = Rect2(128, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose6"]
+atlas = ExtResource("1_atlas")
+region = Rect2(256, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose7"]
+atlas = ExtResource("1_atlas")
+region = Rect2(384, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose10"]
+atlas = ExtResource("1_atlas")
+region = Rect2(256, 256, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose11"]
+atlas = ExtResource("1_atlas")
+region = Rect2(384, 256, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose0"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose1"]
+atlas = ExtResource("1_atlas")
+region = Rect2(128, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose2"]
+atlas = ExtResource("1_atlas")
+region = Rect2(256, 0, 128, 128)
+filter_clip = true
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose9")
+}],
+"loop": 0,
+"name": &"aviso",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose9")
+}, {
+"duration": 2.0,
+"texture": SubResource("Pose3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose8")
+}],
+"loop": 0,
+"name": &"bote",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose3")
+}],
+"loop": 1,
+"name": &"cerco",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose3")
+}],
+"loop": 0,
+"name": &"cerco_parado",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose7")
+}],
+"loop": 1,
+"name": &"corrida",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose10")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose11")
+}],
+"loop": 1,
+"name": &"fuga",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose0")
+}],
+"loop": 0,
+"name": &"neutro",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Pose0")
+}],
+"loop": 1,
+"name": &"passo",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Pose9")
+}],
+"loop": 0,
+"name": &"recuo",
+"speed": 1.0
+}]

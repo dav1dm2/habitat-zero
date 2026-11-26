@@ -1,0 +1,50 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+DREAM OK Emergência vermelha pulsa suavemente no Dia 1
+DREAM OK Luz e abertura da sala de máquinas visíveis do corredor
+DREAM OK Evento invisível e desativado nos dias normais
+DREAM OK Restaurar energia apaga luz de emergência
+DREAM OK Primeiro descanso aceito
+DREAM OK Sono trava controles e recusa segundo acionamento
+DREAM OK Sono usa escurecimento gradual antes de mudar dia
+DREAM OK Despertar do Dia 2 restaura visibilidade
+DREAM OK Metas pendentes impedem sonho antecipado
+DREAM OK Descanso final aceito após metas do Dia 2
+DREAM OK Despertar como Dia 3 inicia sonho e mantém histórico
+DREAM OK Inventário cheio recebe carta sem destruir item
+DREAM OK Checkpoint do sonho inclui carta e blecaute
+DREAM OK Luz de emergência e iluminação elétrica apagadas no sonho
+DREAM OK Lanterna continua funcional, desligada no despertar
+DREAM OK Robô não trabalha no sonho
+DREAM OK Fusível não restaura o blecaute do sonho
+DREAM OK Disjuntores também não restauram energia
+DREAM OK Tab tem uma única tarefa de investigar
+DREAM OK M1 abre bilhete irregular em vez da carta de missão
+DREAM OK Bilhete continua consultável depois de largado
+DREAM OK Mesma floresta passa ao modo noturno
+DREAM OK Névoa mantém parâmetros aprovados
+DREAM OK Alt permite iluminar a floresta noturna
+DREAM OK Trilha contém nove NPCs mortos e começa na entrada
+DREAM OK Sete cervos em semicírculo substituem fauna cotidiana
+DREAM OK Corpos usam estado e sprite próprios sem ataque
+DREAM OK Gambás mortos permanecem no mesmo lugar
+DREAM OK Cervos aguardam ritual com sinal de apresentação
+DREAM OK Aproximação pela trilha inicia cutscene
+DREAM OK Inventário e Tab não liberam controle durante ritual
+DREAM OK Reinício durante ritual devolve controle no alojamento
+DREAM OK Checkpoint restaura bilhete do sonho sem duplicação
+DREAM OK Retorno após reinício não duplica NPCs de evento
+DREAM OK Alvos e parâmetros de câmera editáveis existem na cena
+DREAM OK Evento pode começar novamente após cancelamento
+DREAM OK Jogador caminha fisicamente e para no centro
+DREAM OK Câmera enquadra alvo do semicírculo após acomodar
+DREAM OK Cervos mudam juntos para aproximação ritual
+DREAM OK Todos os cervos se aproximam por movimento real
+DREAM OK Câmera gira suavemente sem salto entre fases
+DREAM OK Fade encerra a demo antes de contato
+DREAM OK Tela final permanece preta com opção de repetir
+DREAM OK Sequência executou fases na ordem
+DREAM OK Nenhum cervo aplicou dano na cutscene
+DREAM OK Repetir limpa sonho e retorna ao início normal
+DREAM_RESULT 46/46 []

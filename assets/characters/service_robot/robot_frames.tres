@@ -1,0 +1,166 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/characters/service_robot/robot_atlas.png" id="1_atlas"]
+
+[sub_resource type="AtlasTexture" id="Pose0"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose1"]
+atlas = ExtResource("1_atlas")
+region = Rect2(128, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose2"]
+atlas = ExtResource("1_atlas")
+region = Rect2(256, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose3"]
+atlas = ExtResource("1_atlas")
+region = Rect2(384, 0, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose4"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose5"]
+atlas = ExtResource("1_atlas")
+region = Rect2(128, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose6"]
+atlas = ExtResource("1_atlas")
+region = Rect2(256, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose7"]
+atlas = ExtResource("1_atlas")
+region = Rect2(384, 128, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose8"]
+atlas = ExtResource("1_atlas")
+region = Rect2(0, 256, 128, 128)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="Pose9"]
+atlas = ExtResource("1_atlas")
+region = Rect2(128, 256, 128, 128)
+filter_clip = true
+
+[resource]
+animations = [
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("Pose0")
+},
+],
+"loop": false,
+"name": &"off",
+"speed": 1.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("Pose1")
+},
+],
+"loop": false,
+"name": &"idle",
+"speed": 1.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("Pose2")
+},
+{
+"duration": 1.0,
+"texture": SubResource("Pose1")
+},
+{
+"duration": 1.0,
+"texture": SubResource("Pose3")
+},
+{
+"duration": 1.0,
+"texture": SubResource("Pose1")
+},
+],
+"loop": true,
+"name": &"drive",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("Pose4")
+},
+{
+"duration": 1.0,
+"texture": SubResource("Pose8")
+},
+],
+"loop": true,
+"name": &"scan",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("Pose5")
+},
+{
+"duration": 1.0,
+"texture": SubResource("Pose9")
+},
+],
+"loop": true,
+"name": &"fertilize",
+"speed": 9.0
+},
+{
+"frames": [
+{
+"duration": 6.0,
+"texture": SubResource("Pose1")
+},
+{
+"duration": 5.0,
+"texture": SubResource("Pose6")
+},
+],
+"loop": false,
+"name": &"sample",
+"speed": 8.0
+},
+{
+"frames": [
+{
+"duration": 1.0,
+"texture": SubResource("Pose1")
+},
+{
+"duration": 4.0,
+"texture": SubResource("Pose7")
+},
+{
+"duration": 1.0,
+"texture": SubResource("Pose1")
+},
+],
+"loop": false,
+"name": &"deliver",
+"speed": 8.0
+},
+]

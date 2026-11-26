@@ -1,46 +1,66 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene format=3 uid="uid://dpgnoyhrr7xv2"]
 
-[ext_resource type="Script" path="res://scripts/entities/npcs/animal_controller.gd" id="1"]
+[ext_resource type="Script" uid="uid://cjp00hyhxwnw1" path="res://scripts/entities/npcs/animal_controller.gd" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://mcjfar4bye4c" path="res://assets/characters/deer/deer_96.tres" id="2_frames"]
+[ext_resource type="Script" uid="uid://bg65yrfpyrq5l" path="res://scripts/entities/npcs/deer_billboard.gd" id="3_billboard"]
+
 [sub_resource type="CapsuleShape3D" id="Body"]
 radius = 0.35
 height = 1.4
+
+[sub_resource type="StandardMaterial3D" id="SpeciesMaterial"]
+albedo_color = Color(0.65, 0.54, 0.39, 1)
+
 [sub_resource type="CapsuleMesh" id="Mesh"]
 radius = 0.35
 height = 1.4
+
 [sub_resource type="BoxMesh" id="Head"]
 size = Vector3(0.18, 0.18, 0.28)
 
-[node name="Deer" type="CharacterBody3D"]
+[node name="Deer" type="CharacterBody3D" unique_id=305968728]
 collision_layer = 8
 collision_mask = 9
-floor_snap_length = 0.6
 floor_max_angle = 0.7
+floor_snap_length = 0.6
 script = ExtResource("1")
-species = 0
-display_name = "Cervo"
-walk_speed = 1.3
+walk_speed = 1.5
+run_speed = 7.2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-position = Vector3(0, 0.7, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1213654492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 shape = SubResource("Body")
 
-[node name="Visual" type="MeshInstance3D" parent="."]
-position = Vector3(0, 0.7, 0)
+[node name="Visual" type="MeshInstance3D" parent="." unique_id=1836481879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+visible = false
+material_override = SubResource("SpeciesMaterial")
 mesh = SubResource("Mesh")
 
-[node name="Head" type="MeshInstance3D" parent="Visual"]
-position = Vector3(0, 0.18, -0.35)
+[node name="Head" type="MeshInstance3D" parent="Visual" unique_id=339261448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18, -0.35)
 mesh = SubResource("Head")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="EventSprite" type="AnimatedSprite3D" parent="." unique_id=1795242372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.796875, 0)
+pixel_size = 0.022135416
+billboard = 2
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = ExtResource("2_frames")
+animation = &"pastoreio"
+script = ExtResource("3_billboard")
+visual_scale = 1.7
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1422521813]
 path_desired_distance = 0.75
 target_desired_distance = 0.5
 radius = 0.35
 
-[node name="StateLabel" type="Label3D" parent="."]
-position = Vector3(0, 1.9, 0)
-billboard = 1
-font_size = 28
+[node name="StateLabel" type="Label3D" parent="." unique_id=926442584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
 pixel_size = 0.009
-no_depth_test = false
+billboard = 1
 text = "Cervo"
+font_size = 28

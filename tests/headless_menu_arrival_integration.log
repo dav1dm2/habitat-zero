@@ -1,0 +1,57 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+CHECK OK Itens iniciais: carta e fusível
+CHECK OK Névoa suavizada até 26 m
+CHECK OK Carta arquivada e movimento bloqueado
+CHECK OK Q libera slot e cria uma carta física
+CHECK OK Carta fina não atravessa o terreno após arremesso
+CHECK OK Porta entra sem energia
+CHECK OK Chegada pareada e altura correta
+CHECK OK Inventário preserva slot vazio e fusível
+CHECK OK Robô tem base no carregador interno
+CHECK OK Robô não ativa antes da energia
+CHECK OK Carregador conectado à saída pela navegação
+CHECK OK Radiação causa dano na sala de máquinas
+CHECK OK M1 instala e consome fusível
+CHECK OK Painel abre interface 2D com mouse livre
+CHECK OK Puzzle não pausa radiação
+CHECK OK Erro reinicia disjuntores e preserva fusível
+CHECK OK Carta reaparece uma única vez no retorno
+LETTER_POSITION_RESTORE: { "saved": (-0.010255, -0.087994, 64.59984), "actual": (-0.010255, -0.087994, 64.59984), "stored": { "definition": (res://resources/items/arrival_letter.tres):<Resource#-9223371961877394062>, "transform": [X: (0.997772, 0.058252, -0.032534), Y: (-0.057008, 0.997652, 0.037961), Z: (0.034669, -0.036022, 0.998749), O: (-0.010255, -0.087994, 64.59984)], "velocity": (0.0, 0.0, 0.0), "angular": (0.0, 0.0, 0.0), "sleeping": true } }
+CHECK OK Posição da carta preservada
+LETTER_ROTATION_ERROR_RADIANS: 0.0
+CHECK OK Rotação da carta preservada com tolerância física de 0,02 rad
+CHECK OK Retorno usa porta alta, não spawn da estrada
+CHECK OK Fusível instalado persiste entre áreas
+CHECK OK Sequência dos botões restaura energia
+CHECK OK Iluminação interna acende
+CHECK OK Conserto encerra dano radioativo
+CHECK OK Buzzy projeta e oferece briefing
+CHECK OK Confirmação registra briefing e tarefas
+CHECK OK Almoxarifado fornece quatro fertilizantes
+CHECK OK Depósito guarda sem duplicar
+CHECK OK Robô continua bloqueado no Dia 1 após energia
+CHECK OK Item pode ser largado também no interior
+CHECK OK Energia e briefing sobrevivem ao retorno
+CHECK OK Cinco arbustos iniciais disponíveis
+CHECK OK Depósito preservado entre cenas
+CHECK OK Carta largada pode ser recolhida
+CHECK OK Item largado no interior persiste
+CHECK OK Carta recolhida não duplica na próxima visita
+CHECK OK Morte reinicia na chegada de Attis
+CHECK OK Morte restaura carta e fusível iniciais
+CHECK OK Morte apaga progresso do dia
+CHECK OK Morte restaura mundo e depósito do checkpoint
+CHECK OK Morte fecha modal e recupera vida
+CHECK OK Interface aberta antes da morte radioativa
+CHECK OK Morte dentro do puzzle retorna à chegada
+CHECK OK Morte dentro do puzzle fecha interface e libera controle
+CHECK OK Fusível volta ao inventário após morte no painel
+CHECK OK Cama não ignora análises pendentes
+CHECK OK Análises registram duas origens sem duplicação
+CHECK OK Cama avança o dia após todos os critérios
+CHECK OK Dia 2 disponibiliza dez arbustos
+CHECK OK Morte no Dia 2 restaura alojamento e dia correto
+CHECK OK Checkpoint do Dia 2 preserva energia/histórico e renova análises
+ARRIVAL_INTEGRATION: 51/51 passed; []

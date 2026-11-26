@@ -1,0 +1,26 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+REVIEW OK Atalhos disponíveis no executável do editor
+REVIEW OK Jogo inicia normal sem prévia do editor vazar
+REVIEW OK Duplo F9 é protegido durante transição
+REVIEW OK F9 avança Dia 1 para Dia 2 sem tarefas manuais
+REVIEW OK Atalho preserva inventário e renova metas
+REVIEW OK Dia 2 mantém robô inicialmente desligado
+REVIEW OK Segundo F9 entra no sonho com bilhete e tarefa
+REVIEW OK F9 não cria um Dia 4
+REVIEW OK F10 ativa inspeção livre no sonho
+REVIEW OK Inspeção suspende o gatilho sem travar jogador
+REVIEW OK F10 reativa o ritual ao aproximar
+REVIEW OK Avançar dia não interrompe cutscene
+REVIEW OK Reinício limpa modo de inspeção
+REVIEW OK Prévia clara mostra corpos e cervos sem fauna normal
+REVIEW OK Prévia clara permite ver arredores sem neblina
+REVIEW OK Dezesseis sprites existem no cenário editável
+REVIEW OK Gatilho tem volume editável sem colisão de gameplay
+REVIEW OK Salvar prévia clara não altera ambiente de execução
+REVIEW OK Salvar prévia não ativa final em dia normal
+REVIEW OK Prévia noturna aplica iluminação do sonho
+REVIEW OK Restaurar prévia devolve ambiente e fauna normal
+REVIEW OK Atalhos desabilitados não alteram estado
+LEVEL_REVIEW_TOOLS 22/22 []

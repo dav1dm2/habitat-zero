@@ -1,0 +1,190 @@
+{
+  "checks": [
+    {
+      "name": "Dois coletores físicos recolhidos",
+      "passed": true
+    },
+    {
+      "name": "Attis 3/3 antes da visita ao habitat",
+      "passed": true
+    },
+    {
+      "name": "H1 acessível pela porta e reconhecido como campanha",
+      "passed": true
+    },
+    {
+      "name": "Chegada pareada na plataforma",
+      "passed": true
+    },
+    {
+      "name": "Inventário preserva as duas origens independentes",
+      "passed": true
+    },
+    {
+      "name": "Seis aves reais instanciadas",
+      "passed": true
+    },
+    {
+      "name": "Grupos locais de três e ninho ocupado",
+      "passed": true
+    },
+    {
+      "name": "Plataforma fora do cerco",
+      "passed": true
+    },
+    {
+      "name": "Três plantas de coleta, sem tarefa artificial de fertilização",
+      "passed": true
+    },
+    {
+      "name": "Robô mantém base interna durante visita",
+      "passed": true
+    },
+    {
+      "name": "Navegação persistida e teto/abertura presentes",
+      "passed": true
+    },
+    {
+      "name": "Circulação física até CenterApproach",
+      "passed": true
+    },
+    {
+      "name": "Circulação física até SampleApproach1",
+      "passed": true
+    },
+    {
+      "name": "Coletor cheio de Attis não mistura H1",
+      "passed": true
+    },
+    {
+      "name": "M1 coleta H1 1/3 sem consumir",
+      "passed": true
+    },
+    {
+      "name": "Arbusto H1 repetido não duplica 1",
+      "passed": true
+    },
+    {
+      "name": "Circulação física até SampleApproach2",
+      "passed": true
+    },
+    {
+      "name": "M1 coleta H1 2/3 sem consumir",
+      "passed": true
+    },
+    {
+      "name": "Arbusto H1 repetido não duplica 2",
+      "passed": true
+    },
+    {
+      "name": "Circulação física até SampleApproach3",
+      "passed": true
+    },
+    {
+      "name": "M1 coleta H1 3/3 sem consumir",
+      "passed": true
+    },
+    {
+      "name": "Arbusto H1 repetido não duplica 3",
+      "passed": true
+    },
+    {
+      "name": "Circulação física até ObservationPoint",
+      "passed": true
+    },
+    {
+      "name": "Entrada continua permitindo observação segura",
+      "passed": true
+    },
+    {
+      "name": "Casuários detectam e se deslocam para o cerco",
+      "passed": true
+    },
+    {
+      "name": "Aves apoiadas no solo",
+      "passed": true
+    },
+    {
+      "name": "Espaçamento entre as aves",
+      "passed": true
+    },
+    {
+      "name": "Casuário isolado não pode causar dano",
+      "passed": true
+    },
+    {
+      "name": "Dois contatos permitem ataque",
+      "passed": true
+    },
+    {
+      "name": "Ataque aplica dano ao jogador",
+      "passed": true
+    },
+    {
+      "name": "Saída do recinto encerra ataque e causa retirada",
+      "passed": true
+    },
+    {
+      "name": "Kiwi alerta o grupo ao aproximar do ninho",
+      "passed": true
+    },
+    {
+      "name": "Kiwi abandona perseguição ao recuar",
+      "passed": true
+    },
+    {
+      "name": "Retorno às instalações preserva os dois coletores cheios",
+      "passed": true
+    },
+    {
+      "name": "Retorno olha para dentro do corredor",
+      "passed": true
+    },
+    {
+      "name": "Bancada entrega H1 e esvazia somente a unidade selecionada",
+      "passed": true
+    },
+    {
+      "name": "Só H1 não libera descanso",
+      "passed": true
+    },
+    {
+      "name": "Bancada entrega Attis na segunda interação",
+      "passed": true
+    },
+    {
+      "name": "Duas entregas e fertilização liberam descanso",
+      "passed": true
+    },
+    {
+      "name": "Caderno confirma as duas origens e orienta descanso",
+      "passed": true
+    },
+    {
+      "name": "Cama avança de verdade ao Dia 2",
+      "passed": true
+    },
+    {
+      "name": "Coletor esvaziado pode ser reutilizado no H1",
+      "passed": true
+    },
+    {
+      "name": "Ferramenta largada no H1 persiste sem duplicação",
+      "passed": true
+    },
+    {
+      "name": "Morte no H1 retorna ao checkpoint do alojamento",
+      "passed": true
+    },
+    {
+      "name": "Morte preserva histórico do Dia 1 e tarefas renovadas",
+      "passed": true
+    },
+    {
+      "name": "Morte não duplica coletor largado depois do checkpoint",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 46
+}

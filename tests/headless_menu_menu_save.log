@@ -1,0 +1,32 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+MENU OK Menu abre sem save e desabilita Continuar
+MENU OK Menu não inicia campanha nem cria simulação
+MENU OK Menu tem cenário real e câmera ativa
+MENU OK Interface ocupa viewport e mostra ações
+MENU OK Câmera do fundo se movimenta
+MENU OK Novo jogo inicia Dia 1 com carta e fusível
+MENU OK Dia 1 é salvo automaticamente em disco
+MENU OK Esc pausa o mundo e mostra menu
+MENU OK Retomar devolve controle e relógio
+MENU OK Menu de retorno habilita Continuar
+MENU OK Novo jogo com save pede confirmação
+MENU OK Cancelar preserva checkpoint
+MENU OK Continuar carrega checkpoint
+MENU OK Continuar descarta progresso parcial do dia
+MENU OK Despertar salva o Dia 2 e seu histórico
+MENU OK Save serializa coletores independentes e depósito
+MENU OK Save contém itens físicos e transformações
+MENU OK Save preserva restrição diária por arbusto
+MENU OK Outro processo Godot retoma o checkpoint em disco
+MENU OK Continuar restaura Dia 2 a partir do arquivo
+MENU OK Recarga restaura conteúdos e posição do checkpoint
+MENU OK Sonho tem checkpoint persistente com carta e blecaute
+MENU OK Continuar também retoma o sonho
+MENU OK Sonho restaurado ativa a apresentação de blecaute
+MENU OK Save inválido recupera cópia anterior
+MENU OK Gravação inválida não substitui backup
+MENU OK Dano dos animais aumentou 20 por cento
+MENU OK Radiação de campanha aumentou 20 por cento
+MENU_RESULT 28/28 []

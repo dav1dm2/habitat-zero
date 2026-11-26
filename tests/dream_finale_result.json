@@ -1,0 +1,204 @@
+{
+  "checks": [
+    {
+      "name": "Emergência vermelha pulsa suavemente no Dia 1",
+      "passed": true
+    },
+    {
+      "name": "Luz e abertura da sala de máquinas visíveis do corredor",
+      "passed": true
+    },
+    {
+      "name": "Evento invisível e desativado nos dias normais",
+      "passed": true
+    },
+    {
+      "name": "Restaurar energia apaga luz de emergência",
+      "passed": true
+    },
+    {
+      "name": "Primeiro descanso aceito",
+      "passed": true
+    },
+    {
+      "name": "Sono trava controles e recusa segundo acionamento",
+      "passed": true
+    },
+    {
+      "name": "Sono usa escurecimento gradual antes de mudar dia",
+      "passed": true
+    },
+    {
+      "name": "Despertar do Dia 2 restaura visibilidade",
+      "passed": true
+    },
+    {
+      "name": "Metas pendentes impedem sonho antecipado",
+      "passed": true
+    },
+    {
+      "name": "Descanso final aceito após metas do Dia 2",
+      "passed": true
+    },
+    {
+      "name": "Despertar como Dia 3 inicia sonho e mantém histórico",
+      "passed": true
+    },
+    {
+      "name": "Inventário cheio recebe carta sem destruir item",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint do sonho inclui carta e blecaute",
+      "passed": true
+    },
+    {
+      "name": "Luz de emergência e iluminação elétrica apagadas no sonho",
+      "passed": true
+    },
+    {
+      "name": "Lanterna continua funcional, desligada no despertar",
+      "passed": true
+    },
+    {
+      "name": "Robô não trabalha no sonho",
+      "passed": true
+    },
+    {
+      "name": "Fusível não restaura o blecaute do sonho",
+      "passed": true
+    },
+    {
+      "name": "Disjuntores também não restauram energia",
+      "passed": true
+    },
+    {
+      "name": "Tab tem uma única tarefa de investigar",
+      "passed": true
+    },
+    {
+      "name": "M1 abre bilhete irregular em vez da carta de missão",
+      "passed": true
+    },
+    {
+      "name": "Bilhete continua consultável depois de largado",
+      "passed": true
+    },
+    {
+      "name": "Mesma floresta passa ao modo noturno",
+      "passed": true
+    },
+    {
+      "name": "Névoa mantém parâmetros aprovados",
+      "passed": true
+    },
+    {
+      "name": "Alt permite iluminar a floresta noturna",
+      "passed": true
+    },
+    {
+      "name": "Trilha contém nove NPCs mortos e começa na entrada",
+      "passed": true
+    },
+    {
+      "name": "Sete cervos em semicírculo substituem fauna cotidiana",
+      "passed": true
+    },
+    {
+      "name": "Corpos usam estado e sprite próprios sem ataque",
+      "passed": true
+    },
+    {
+      "name": "Gambás mortos permanecem no mesmo lugar",
+      "passed": true
+    },
+    {
+      "name": "Cervos aguardam ritual com sinal de apresentação",
+      "passed": true
+    },
+    {
+      "name": "Aproximação pela trilha inicia cutscene",
+      "passed": true
+    },
+    {
+      "name": "Inventário e Tab não liberam controle durante ritual",
+      "passed": true
+    },
+    {
+      "name": "Reinício durante ritual devolve controle no alojamento",
+      "passed": true
+    },
+    {
+      "name": "Checkpoint restaura bilhete do sonho sem duplicação",
+      "passed": true
+    },
+    {
+      "name": "Retorno após reinício não duplica NPCs de evento",
+      "passed": true
+    },
+    {
+      "name": "Alvos e parâmetros de câmera editáveis existem na cena",
+      "passed": true
+    },
+    {
+      "name": "Evento pode começar novamente após cancelamento",
+      "passed": true
+    },
+    {
+      "name": "Jogador caminha fisicamente e para no centro",
+      "passed": true
+    },
+    {
+      "name": "Câmera enquadra alvo do semicírculo após acomodar",
+      "passed": true
+    },
+    {
+      "name": "Cervos mudam juntos para aproximação ritual",
+      "passed": true
+    },
+    {
+      "name": "Todos os cervos se aproximam por movimento real",
+      "passed": true
+    },
+    {
+      "name": "Câmera gira suavemente sem salto entre fases",
+      "passed": true
+    },
+    {
+      "name": "Fade encerra a demo antes de contato",
+      "passed": true
+    },
+    {
+      "name": "Fade conclui e mostra o epílogo com opção de repetir",
+      "passed": true
+    },
+    {
+      "name": "Sequência executou fases na ordem",
+      "passed": true
+    },
+    {
+      "name": "Nenhum cervo aplicou dano na cutscene",
+      "passed": true
+    },
+    {
+      "name": "Epílogo dá foco à opção de repetir",
+      "passed": true
+    },
+    {
+      "name": "A do gamepad repete a demo e limpa o sonho",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 47,
+  "phases": [
+    "walking_to_center",
+    "centered",
+    "deer_approaching",
+    "fading_out",
+    "finished",
+    "inactive",
+    "inactive"
+  ],
+  "walk_frames": 205
+}

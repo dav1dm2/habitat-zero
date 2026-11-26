@@ -1,0 +1,4 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://tests/launch_dream_finale.gd" id="1"]
+[node name="DreamFinale" type="Node"]
+script = ExtResource("1")

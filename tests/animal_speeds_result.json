@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "name": "Fuga real de deer supera caminhada do jogador",
+      "passed": true
+    },
+    {
+      "name": "Fuga real de skunk supera caminhada do jogador",
+      "passed": true
+    },
+    {
+      "name": "Fuga real de kiwi supera caminhada do jogador",
+      "passed": true
+    },
+    {
+      "name": "Fuga real de casuario supera caminhada do jogador",
+      "passed": true
+    },
+    {
+      "name": "Casuário usa corrida ao avançar para ataque",
+      "passed": true
+    },
+    {
+      "name": "Névoa inicia a 5 m e se estende a 26 m",
+      "passed": true
+    },
+    {
+      "name": "Cena principal usa a névoa suavizada",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "measurements": [
+    {
+      "configured": 7.2,
+      "measured": 7.20000839233398,
+      "species": "deer",
+      "state": "fugindo"
+    },
+    {
+      "configured": 6.4,
+      "measured": 6.39998531341553,
+      "species": "skunk",
+      "state": "fugindo"
+    },
+    {
+      "configured": 6.8,
+      "measured": 6.80001068115234,
+      "species": "kiwi",
+      "state": "fugindo"
+    },
+    {
+      "configured": 7.0,
+      "measured": 6.99999618530273,
+      "species": "casuario",
+      "state": "fugindo"
+    },
+    {
+      "measured": 7.0000057220459,
+      "species": "casuario",
+      "state": "aproximando para ataque"
+    }
+  ],
+  "passed": 7
+}

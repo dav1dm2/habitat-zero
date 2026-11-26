@@ -1,0 +1,34 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+DAY2 OK Três áreas de trabalho carregadas mesmo nas instalações
+DAY2 OK Dia 1 só tem três plantas visíveis no H1
+DAY2 OK Dia 1 não permite ativar robô
+DAY2 OK Buzzy explica trabalho manual no Dia 1
+DAY2 OK Dois coletores do jogador preservados
+DAY2 OK Cama inicia Dia 2 e renova entregas
+DAY2 OK Dia 2 anuncia automação imediatamente
+DAY2 OK Dia 2 tem seis plantas no H1 sem duplicação
+DAY2 OK Dia 2 permite todos os arbustos presentes nas duas áreas
+DAY2 FAIL Plantas do dia anterior recusam nova coleta
+DAY2 OK Coletor antigo não pode misturar dia novo
+DAY2 FAIL Contador diário exclui amostras antigas
+DAY2 OK Ativação aguarda explicação de Buzzy
+DAY2 OK Confirmação libera automação
+DAY2 OK Bancada esvazia amostra antiga sem concluir hoje
+DAY2 FAIL Caderno mostra tarefas novas e ativação
+DAY2 OK Dia 2 permite ativar robô
+DAY2 OK Visita do jogador ao H1 preserva ajudante
+DAY2 OK Robô visita Attis e H1 sem trocar a cena do jogador
+DAY2 OK Robô fertiliza os cinco arbustos novos
+DAY2 OK Robô coleta três de cada origem e entrega ambas
+DAY2 OK Entregas acontecem fisicamente na bancada
+DAY2 OK Robô retorna à base após concluir tudo
+DAY2 OK Nenhum coletor do jogador foi consumido pelo robô
+DAY2 FAIL M1 coleta três plantas novas do H1 no Dia 2
+DAY2 FAIL Entrega concorrente não duplica conclusão
+DAY2 OK Tarefas do Dia 2 estão completas
+DAY2 OK Entrega do jogador cancela coleta redundante do robô
+DAY2 OK Morte reinicia tarefas atuais sem perder histórico
+DAY2 OK Crescimento não duplica após reinício
+DAY2_RESULT 25/30 [{ "name": "Plantas do dia anterior recusam nova coleta", "passed": false }, { "name": "Contador diário exclui amostras antigas", "passed": false }, { "name": "Caderno mostra tarefas novas e ativação", "passed": false }, { "name": "M1 coleta três plantas novas do H1 no Dia 2", "passed": false }, { "name": "Entrega concorrente não duplica conclusão", "passed": false }]

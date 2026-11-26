@@ -1,0 +1,4 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://tests/launch_diagnose_top.gd" id="1"]
+[node name="Diagnosis" type="Node"]
+script = ExtResource("1")

@@ -48,10 +48,3 @@ mesh = SubResource("Mesh_frame")
 position = Vector3(0, 2.4, 0)
 rotation = Vector3(0, 0, 1.5708)
 mesh = SubResource("Mesh_frame")
-
-[node name="AccessLabel" type="Label3D" parent="."]
-position = Vector3(0, 2.58, -0.12)
-pixel_size = 0.003
-text = "E  |  ACESSAR"
-font_size = 36
-outline_size = 4

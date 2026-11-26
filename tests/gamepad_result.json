@@ -1,0 +1,138 @@
+{
+  "checks": [
+    {
+      "name": "Mapas preservam teclado e incluem analógico",
+      "passed": true
+    },
+    {
+      "name": "Ações cobrem inventário, caderno e pausa",
+      "passed": true
+    },
+    {
+      "name": "Deadzones separadas para movimento e olhar",
+      "passed": true
+    },
+    {
+      "name": "Gamepad ativa dicas Xbox no menu",
+      "passed": true
+    },
+    {
+      "name": "A inicia novo jogo sem mouse",
+      "passed": true
+    },
+    {
+      "name": "A de confirmar não causa pulo ao entrar",
+      "passed": true
+    },
+    {
+      "name": "HUD muda para controle",
+      "passed": true
+    },
+    {
+      "name": "Pequeno ruído no analógico não move jogador",
+      "passed": true
+    },
+    {
+      "name": "Inclinação do analógico controla velocidade",
+      "passed": true
+    },
+    {
+      "name": "Analógico direito olha horizontal e verticalmente",
+      "passed": true
+    },
+    {
+      "name": "Câmera manual respeita bloqueios de interface/cutscene",
+      "passed": true
+    },
+    {
+      "name": "Y alterna lanterna",
+      "passed": true
+    },
+    {
+      "name": "B alterna agachamento sem precisar segurar",
+      "passed": true
+    },
+    {
+      "name": "L3 alterna corrida e gasta estamina",
+      "passed": true
+    },
+    {
+      "name": "Parar encerra corrida alternada",
+      "passed": true
+    },
+    {
+      "name": "LT também permite correr segurando",
+      "passed": true
+    },
+    {
+      "name": "RB seleciona próximo slot",
+      "passed": true
+    },
+    {
+      "name": "LB seleciona slot anterior",
+      "passed": true
+    },
+    {
+      "name": "View abre caderno com foco de botão",
+      "passed": true
+    },
+    {
+      "name": "Direcional para cima navega sem fechar caderno",
+      "passed": true
+    },
+    {
+      "name": "Analógico não move câmera atrás do caderno",
+      "passed": true
+    },
+    {
+      "name": "B fecha caderno e libera jogador",
+      "passed": true
+    },
+    {
+      "name": "Menu/Start pausa e foca Retomar",
+      "passed": true
+    },
+    {
+      "name": "B retoma pela pausa",
+      "passed": true
+    },
+    {
+      "name": "RT coleta amostra física sem consumir ferramenta",
+      "passed": true
+    },
+    {
+      "name": "Oscilação do gatilho segurado não repete uso",
+      "passed": true
+    },
+    {
+      "name": "Soltar e apertar RT permite nova coleta",
+      "passed": true
+    },
+    {
+      "name": "Direcional para baixo arremessa item",
+      "passed": true
+    },
+    {
+      "name": "X recolhe item físico",
+      "passed": true
+    },
+    {
+      "name": "Dicas de interação usam X e RT",
+      "passed": true
+    },
+    {
+      "name": "Teclado reassume dicas e slots",
+      "passed": true
+    },
+    {
+      "name": "Desconexão do controle pausa campanha",
+      "passed": true
+    },
+    {
+      "name": "Desconexão não desfaz pausa já aberta",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 33
+}

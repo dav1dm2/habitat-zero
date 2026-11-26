@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "active_attis_collection_task": true,
+    "bed_explains_block": true,
+    "bench_explains_no_delivery": true,
+    "buzzy_limits_current_tasks": true,
+    "collector_instructions": true,
+    "habitat_task_explained": true,
+    "sleep_criteria_preserved": true
+  },
+  "passed": 7,
+  "total": 7
+}

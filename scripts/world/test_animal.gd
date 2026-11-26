@@ -5,7 +5,7 @@ extends Node3D
 @export var flee_distance: float = 4.5
 @export var territorial_radius: float = 3.0
 @export var attack_radius: float = 1.25
-@export var damage_per_second: float = 12.0
+@export var damage_per_second: float = 15.84
 
 var _attack_cooldown: float = 0.0
 var _home_position: Vector3

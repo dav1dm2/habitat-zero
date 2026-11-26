@@ -1,0 +1,31 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+SAMPLES OK Duas unidades físicas no laboratório
+SAMPLES OK E recolhe dois coletores em slots separados
+SAMPLES OK Estado independente
+SAMPLES OK Duas ferramentas atravessam a porta
+SAMPLES OK Todos os arbustos presentes permitem coleta
+SAMPLES OK M1 coleta sem consumir
+SAMPLES OK Repetir arbusto não aumenta contador
+SAMPLES OK HUD mostra 1/3
+SAMPLES OK Caderno acompanha 1/3
+SAMPLES OK Entrega incompleta recusada
+SAMPLES OK Depósito preserva conteúdo
+SAMPLES OK Retirada preserva conteúdo
+SAMPLES OK Q/E preserva amostra sem duplicar
+SAMPLES OK Três locais enchem apenas o primeiro coletor
+SAMPLES OK Capacidade limitada a três
+SAMPLES OK Segundo coletor não repete planta usada no mesmo dia
+SAMPLES OK Outro arbusto fornece amostra ao segundo coletor
+SAMPLES OK Não mistura origens
+SAMPLES OK Retorno preserva 3/3 e 1/3, sem reposição de ferramentas
+SAMPLES OK E na bancada conclui tarefa e esvazia coletor cheio
+SAMPLES OK Entrega mantém as duas ferramentas e segundo conteúdo
+SAMPLES OK HUD volta a 0/3
+SAMPLES OK Não entrega parcial nem duplica conclusão
+SAMPLES OK Caderno marca conclusão de Attis e tarefa do Habitat 1
+SAMPLES OK Sono aguarda Habitat 1
+SAMPLES OK Morte restaura coletor largado e conteúdo do depósito
+SAMPLES OK Morte preserva conclusão no checkpoint
+SAMPLES OK Segundo reinício não altera snapshot

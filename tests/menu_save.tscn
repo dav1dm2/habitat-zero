@@ -1,0 +1,4 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://tests/launch_menu_save_checks.gd" id="1"]
+[node name="MenuSaveChecks" type="Node"]
+script = ExtResource("1")

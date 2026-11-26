@@ -1,0 +1,1572 @@
+{
+  "deliveries": [
+    {
+      "lab_distance": 0.694330215454102,
+      "origin": "habitat1",
+      "room": "res://scenes/levels/attis_interior.tscn"
+    },
+    {
+      "lab_distance": 0.650073707103729,
+      "origin": "attis",
+      "room": "res://scenes/levels/attis_interior.tscn"
+    }
+  ],
+  "elapsed": 254.5,
+  "trace": [
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-5.101196, 0.000875, -0.679132)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 0.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-1.294312, 0.000875, -0.91554)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 2.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-1.029907, 0.000875, -4.833378)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 4.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-0.928284, 0.000875, -8.820589)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 6.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-1.368042, 0.000875, -12.63242)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 8.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-5.194031, 0.000875, -13.76212)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 10.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-2.997716, 0.522478, 11.91829)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 12.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-6.167832, 0.001, 9.495495)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 14.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-9.345033, 0.003652, 7.085996)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 16.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-10.31466, 0.01532, 6.487508)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "coletando amostras",
+      "t": 18.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-10.87651, 0.056357, 3.598082)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 1,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 20.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-11.13885, 0.070774, 3.021992)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 1,
+      "stalled": 0.0,
+      "state": "coletando amostras",
+      "t": 22.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-8.49404, 0.000998, 0.75246)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 2,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 24.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-5.466998, 0.000998, -1.846969)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 2,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 26.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-2.439942, 0.000983, -4.446394)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 2,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 28.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(0.053658, 0.001, -5.949733)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 2,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 30.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(2.752828, 0.000998, -8.433904)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 2,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 32.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(3.488172, 0.000983, -9.386423)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 2,
+      "stalled": 0.0,
+      "state": "coletando amostras",
+      "t": 34.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(3.061073, 0.001, -6.504564)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 36.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(2.476129, 0.000983, -2.55768)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 38.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(1.888961, 0.000998, 1.388779)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 40.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(1.304263, 0.001, 5.335701)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 42.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(0.718042, 0.001, 9.282411)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 44.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(0.132759, 0.651, 13.22924)",
+      "room": "res://scenes/levels/habitat_1.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 46.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-2.428101, 0.000875, -13.14122)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 48.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-0.699829, 0.000875, -10.0097)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 50.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(-0.052673, 0.000876, -6.137027)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 52.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(0.60614, 0.000875, -2.202091)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 54.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [],
+      "pos": "(3.594727, 0.000875, -0.485699)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 56.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(3.441956, 0.000875, -0.194463)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 58.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(0.056763, 0.000875, 1.188712)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 60.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-0.105835, 0.000875, 5.031838)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 62.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-0.044189, 0.000983, 9.021369)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 64.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-0.496948, 24.05087, -70.43492)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 66.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-1.473816, 24.05087, -66.56615)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 68.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-2.497772, 24.05087, -62.72078)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 70.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-5.202179, 24.05098, -59.88119)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 72.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-8.046021, 24.03693, -57.0824)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 74.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-10.86981, 23.55955, -54.26162)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 76.25
+    },
+    {
+      "fertilized": 5,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-13.67972, 23.33334, -51.51868)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "escaneando",
+      "t": 78.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-13.67972, 23.33334, -51.51868)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "escaneando",
+      "t": 80.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-12.99231, 23.24869, -50.68948)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 1,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 82.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-10.48813, 22.92367, -47.66323)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 1,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 84.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-9.476349, 22.77379, -46.44426)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 1,
+      "stalled": 0.0,
+      "state": "coletando amostras",
+      "t": 86.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-6.855865, 22.74202, -46.16986)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 2,
+      "stalled": 0.0,
+      "state": "escaneando",
+      "t": 88.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-6.702301, 22.80158, -46.65271)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 90.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-5.655273, 23.22319, -50.43658)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 92.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-4.624786, 23.6415, -54.29114)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 94.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-3.616211, 24.05098, -58.15141)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 96.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-2.626801, 24.05087, -62.01689)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 98.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-1.646484, 24.05087, -65.8849)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 100.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-0.667938, 24.05087, -69.75367)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 102.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(0.012573, 0.000875, 10.06338)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 104.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(0.0401, 0.000875, 6.07344)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 106.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(-0.057251, 0.000875, 2.153082)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 108.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1"
+      ],
+      "pos": "(2.424438, 0.000875, 0.053379)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 3,
+      "stalled": 0.0,
+      "state": "levando amostras ao laboratório",
+      "t": 110.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(4.601562, 0.000875, -0.36402)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 112.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(0.808472, 0.000875, 0.46516)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 114.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-0.123413, 0.000875, 3.922468)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 116.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-0.061401, 0.000875, 7.911998)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 118.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-0.096985, 24.05087, -71.96737)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 120.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-0.969818, 24.05087, -68.07361)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 122.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-1.842163, 24.05087, -64.17985)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 124.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-2.714386, 24.05098, -60.28631)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 126.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-3.592377, 23.93945, -56.3936)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 128.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-4.43396, 23.42114, -52.55486)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 130.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-5.307526, 23.03414, -48.65961)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 132.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-7.700623, 22.78621, -46.53139)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 134.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-9.083344, 22.36984, -43.35588)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 136.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-8.951782, 21.78522, -39.36519)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 138.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-8.849182, 21.11836, -35.37178)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 140.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-8.754456, 20.35963, -31.37814)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 142.25
+    },
+    {
+      "fertilized": 6,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-9.292328, 19.99142, -29.58729)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "fertilizando",
+      "t": 144.25
+    },
+    {
+      "fertilized": 7,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-9.411194, 19.51748, -27.37108)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 146.25
+    },
+    {
+      "fertilized": 7,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-9.608856, 18.62163, -23.38079)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 148.25
+    },
+    {
+      "fertilized": 7,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-9.832642, 17.68712, -19.39191)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 150.25
+    },
+    {
+      "fertilized": 7,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-10.05768, 16.71827, -15.4024)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 152.25
+    },
+    {
+      "fertilized": 7,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-10.27145, 15.71602, -11.41139)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 154.25
+    },
+    {
+      "fertilized": 7,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-10.47656, 14.83521, -7.99152)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "escaneando",
+      "t": 156.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-10.47656, 14.83521, -7.99152)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "repondo fertilizante",
+      "t": 158.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-10.47656, 14.83521, -7.99152)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "repondo fertilizante",
+      "t": 160.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-8.425964, 14.29434, -5.917012)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 162.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-5.647827, 13.56103, -3.133788)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 164.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-2.870026, 12.79873, -0.261571)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 166.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-0.049866, 12.04481, 2.567899)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 168.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(2.797211, 11.29835, 5.369476)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 170.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(5.661499, 10.55807, 8.1545)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 172.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(8.564545, 9.834045, 10.8987)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 174.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(11.52597, 9.132898, 13.5809)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 176.25
+    },
+    {
+      "fertilized": 8,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(12.70102, 8.863427, 14.64519)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "fertilizando",
+      "t": 178.25
+    },
+    {
+      "fertilized": 9,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(12.50592, 8.192743, 17.23887)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 180.25
+    },
+    {
+      "fertilized": 9,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(12.16824, 7.208474, 21.15733)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 182.25
+    },
+    {
+      "fertilized": 9,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(11.8609, 6.24228, 25.14202)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 184.25
+    },
+    {
+      "fertilized": 9,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(11.54648, 5.324485, 29.12498)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 186.25
+    },
+    {
+      "fertilized": 9,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(11.22226, 4.462956, 33.10677)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "andando",
+      "t": 188.25
+    },
+    {
+      "fertilized": 9,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(10.99979, 3.906638, 35.82458)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "fertilizando",
+      "t": 190.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(10.80688, 4.176174, 34.50864)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 192.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(10.23294, 5.000405, 30.62412)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 194.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(9.653259, 5.885471, 26.67644)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 196.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(9.070129, 6.823266, 22.72934)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 198.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(8.466858, 7.79974, 18.78538)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 200.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(7.911072, 8.807866, 14.83426)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 202.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(7.346741, 9.837955, 10.88437)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 204.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(6.613525, 10.87507, 6.969408)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 206.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(5.72171, 11.93767, 3.080423)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 208.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(4.785553, 13.04843, -0.732596)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 210.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(3.929199, 14.20382, -4.499122)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 212.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(3.078308, 15.35871, -8.397334)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 214.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(2.247742, 16.36152, -12.30003)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 216.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(1.416626, 17.17007, -16.20252)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 218.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(1.016174, 17.79915, -20.09952)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 220.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(1.047211, 18.33698, -24.08939)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 222.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(1.846649, 18.7834, -27.95219)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 224.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(2.940094, 19.23332, -31.78875)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 226.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(3.439087, 19.75357, -35.71533)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 228.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(3.455902, 20.37756, -39.70522)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 230.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(4.147797, 21.10614, -43.6257)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 232.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(3.814941, 22.12999, -47.59944)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 234.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(3.332214, 23.07974, -51.495)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 236.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(2.701172, 23.80391, -55.43478)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 238.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(2.071411, 24.051, -59.37467)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 240.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(1.461121, 24.05087, -63.25355)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 242.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(0.832062, 24.05087, -67.19385)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 244.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(0.202301, 24.05087, -71.13423)",
+      "room": "res://scenes/levels/attis_forest.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "indo para outra sala",
+      "t": 246.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-0.242126, 0.000875, 8.615657)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "retornando à base",
+      "t": 248.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-0.591736, 0.000875, 4.640968)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "retornando à base",
+      "t": 250.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-1.185913, 0.000875, 0.746084)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "retornando à base",
+      "t": 252.25
+    },
+    {
+      "fertilized": 10,
+      "origins": [
+        "habitat1",
+        "attis"
+      ],
+      "pos": "(-5.072021, 0.000875, 0.106953)",
+      "room": "res://scenes/levels/attis_interior.tscn",
+      "samples": 0,
+      "stalled": 0.0,
+      "state": "retornando à base",
+      "t": 254.25
+    }
+  ],
+  "visited": [
+    "res://scenes/levels/attis_interior.tscn",
+    "res://scenes/levels/habitat_1.tscn",
+    "res://scenes/levels/attis_forest.tscn"
+  ]
+}

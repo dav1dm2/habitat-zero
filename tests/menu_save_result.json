@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "name": "Menu abre sem save e desabilita Continuar",
+      "passed": true
+    },
+    {
+      "name": "Menu não inicia campanha nem cria simulação",
+      "passed": true
+    },
+    {
+      "name": "Menu tem cenário real e câmera ativa",
+      "passed": true
+    },
+    {
+      "name": "Interface ocupa viewport e mostra ações",
+      "passed": true
+    },
+    {
+      "name": "Câmera do fundo se movimenta",
+      "passed": true
+    },
+    {
+      "name": "Novo jogo inicia Dia 1 com carta e fusível",
+      "passed": true
+    },
+    {
+      "name": "Dia 1 é salvo automaticamente em disco",
+      "passed": true
+    },
+    {
+      "name": "Esc pausa o mundo e mostra menu",
+      "passed": true
+    },
+    {
+      "name": "Retomar devolve controle e relógio",
+      "passed": true
+    },
+    {
+      "name": "Menu de retorno habilita Continuar",
+      "passed": true
+    },
+    {
+      "name": "Novo jogo com save pede confirmação",
+      "passed": true
+    },
+    {
+      "name": "Cancelar preserva checkpoint",
+      "passed": true
+    },
+    {
+      "name": "Continuar carrega checkpoint",
+      "passed": true
+    },
+    {
+      "name": "Continuar descarta progresso parcial do dia",
+      "passed": true
+    },
+    {
+      "name": "Despertar salva o Dia 2 e seu histórico",
+      "passed": true
+    },
+    {
+      "name": "Save serializa coletores independentes e depósito",
+      "passed": true
+    },
+    {
+      "name": "Save contém itens físicos e transformações",
+      "passed": true
+    },
+    {
+      "name": "Save preserva restrição diária por arbusto",
+      "passed": true
+    },
+    {
+      "name": "Outro processo Godot retoma o checkpoint em disco",
+      "passed": true
+    },
+    {
+      "name": "Continuar restaura Dia 2 a partir do arquivo",
+      "passed": true
+    },
+    {
+      "name": "Recarga restaura conteúdos e posição do checkpoint",
+      "passed": true
+    },
+    {
+      "name": "Sonho tem checkpoint persistente com carta e blecaute",
+      "passed": true
+    },
+    {
+      "name": "Continuar também retoma o sonho",
+      "passed": true
+    },
+    {
+      "name": "Sonho restaurado ativa a apresentação de blecaute",
+      "passed": true
+    },
+    {
+      "name": "Save inválido recupera cópia anterior",
+      "passed": true
+    },
+    {
+      "name": "Gravação inválida não substitui backup",
+      "passed": true
+    },
+    {
+      "name": "Dano ajustado dos animais",
+      "passed": true
+    },
+    {
+      "name": "Dano ajustado da radiação de campanha",
+      "passed": true
+    }
+  ],
+  "failed": 0,
+  "passed": 28
+}
